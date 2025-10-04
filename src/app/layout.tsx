@@ -6,7 +6,7 @@ const onest = Onest({
   subsets: ["latin"],
   variable: "--font-onest",
   display: "swap",
-  weight: ["400", "500", "600", "700"], // adjust weights you need
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
