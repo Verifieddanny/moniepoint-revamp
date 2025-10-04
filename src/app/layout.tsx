@@ -28,14 +28,7 @@ export const metadata: Metadata = {
     { name: "Unclenebo", url: "https://x.com/Agbanebbie" } 
   ],
   openGraph: {
-    title: "Moniepoint — Simple, Smart Banking for Individuals & Businesses",
-    description:
-      "Moniepoint provides secure digital banking and payment solutions for individuals and businesses in Africa. Manage your money, grow your business.",
-    url: "https://moniepoint-revamp.vercel.app/",
-    siteName: "Moniepoint",
-    images: "/og-image.jpg",
-    locale: "en_NG",
-    type: "website",
+    images: "/og-image.jpg"
   },
   twitter: {
     card: "summary_large_image",
