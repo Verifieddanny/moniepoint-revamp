@@ -33,14 +33,7 @@ export const metadata: Metadata = {
       "Moniepoint provides secure digital banking and payment solutions for individuals and businesses in Africa. Manage your money, grow your business.",
     url: "https://moniepoint-revamp.vercel.app/",
     siteName: "Moniepoint",
-    images: [
-      {
-        url: "https://moniepoint-revamp.vercel.app/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Moniepoint Landing Page Preview",
-      },
-    ],
+    images: "/og-image.jpg",
     locale: "en_NG",
     type: "website",
   },
@@ -49,7 +42,7 @@ export const metadata: Metadata = {
     title: "Moniepoint — Simple, Smart Banking for Individuals & Businesses",
     description:
       "Manage money, accept payments, and grow your business with Moniepoint’s secure and modern banking solutions.",
-    images: ["https://moniepoint-revamp.vercel.app/og-image.jpg"],
+    images: ["/og-image.jpg"],
     creator: "@Moniepoint",
   },
   metadataBase: new URL("https://moniepoint-revamp.vercel.app/"),
