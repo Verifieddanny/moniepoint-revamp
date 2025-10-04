@@ -1,26 +1,117 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ===== Font ===== */
+  --font-custom: var(--font-onest); 
+
+  /* ===== Colors ===== */
+  --primary: #001335;
+  --secondary: #0A70FF;
+  --background: #FFFFFF;
+  --button: #002C88;
+  --accent: #2191FF;
+
+  /* ===== Gradients ===== */
+  --gradient-start: #B36AE9; 
+  --gradient-middle: #EC6189; 
+  --gradient-end: #FCA74B; 
+  --gradient-start-two: #00F090;
+  --gradient-end-two: #009EFB;
 }
 
-@theme inline {
+@theme {
+  /* Colors */
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground: var(--primary);
+  --color-button: var(--button);
+  --color-accent: var(--accent);
+
+  /* Gradient colors */
+  --color-gradient-start: var(--gradient-start);
+  --color-gradient-middle: var(--gradient-middle);
+  --color-gradient-end: var(--gradient-end);
+  --color-gradient-start-two: var(--gradient-start-two);
+  --color---gradient-end-two: var(--gradient-end-two);
+
+  /* Fonts */
+  --font-custom: var(--font-custom);
+  --font-sans: var(--font-onest); 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  body {
+    font-family: var(--font-custom, Arial, Helvetica, sans-serif);
+    @apply bg-background text-foreground;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+button {
+  @apply cursor-pointer;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary/90;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white hover:bg-secondary/90;
+}
+
+.accent {
+  @apply text-primary;
+}
+
+/* Gradient button */
+.btn-gradient {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-middle) 50%, var(--gradient-end) 100%);
+  @apply text-white font-medium rounded-xl px-6 py-3 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98];
+}
+
+.btn-gradient-two {
+  background: linear-gradient(135deg, var(--gradient-start-two) 0%, var(--gradient-end-two) 100%);
+  @apply text-white font-medium rounded-xl px-6 py-3 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98];
+}
+
+.background-gradient {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-middle) 50%, var(--gradient-end) 100%);
+  @apply text-white;
+}
+
+.background-gradient-two {
+  background: linear-gradient(135deg, var(--gradient-start-two) 0%, var(--gradient-end-two) 100%);
+  @apply text-white;
+}
+
+/* Alternative gradient directions */
+.gradient-horizontal {
+  background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-middle) 50%, var(--gradient-end) 100%);
+}
+
+.gradient-vertical {
+  background: linear-gradient(180deg, var(--gradient-start) 0%, var(--gradient-middle) 50%, var(--gradient-end) 100%);
+}
+
+.gradient-diagonal {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-middle) 50%, var(--gradient-end) 100%);
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-middle) 50%, var(--gradient-end) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-2 {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-start) 50%, var(--gradient-middle) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
