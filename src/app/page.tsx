@@ -1,103 +1,94 @@
+import ATMHand from "@/components/illustrations/atm-hand";
+import HandsSectionSynced from "@/components/illustrations/hand-section-synced";
+import LinkUp from "@/components/illustrations/link-up";
+import MoneyLeft from "@/components/illustrations/money-left";
+import MoneyRight from "@/components/illustrations/money-right";
+import POSHand from "@/components/illustrations/pos-hand";
+import RocketPath from "@/components/illustrations/rocket-path";
+import Star from "@/components/illustrations/star";
+import Logo from "@/components/logo";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="flex min-h-screen max-h-[150vh] flex-col bg-primary relative md:pt-[3rem] ">
+      {/* Curved bottom */}
+      <div
+        className="absolute left-1/2 -translate-x-1/2 -bottom-[28vh] w-[200vw] h-[200vw] bg-primary rounded-full z-0"
+      />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+
+      <section className="max-w-[1300px] mx-auto flex flex-col items-center h-fit relative">
+        <div className="w-[12rem] h-[2.1rem] mb-[3rem]">
+          <Logo className="w-full h-full" />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <p className="font-custom text-white font-bold tracking-[-4%] leading-[106%] text-center text-[8.3125rem] mb-[2.5rem]">
+          Simple solutions
+          <br /> to power your
+          <br />
+          business
+        </p>
+
+        <p className="text-white font-medium text-base text-center mb-[3rem]">
+          Collect payments, access loans and manage operations with a <br />{" "}
+          business banking solution that meets all your needs.
+        </p>
+
+        <Link href="">
+          <div className="bg-button rounded-[0.5rem] py-[0.75rem] px-[1rem] flex items-center gap-x-2 hover:bg-accent transition-colors ease-in-out duration-300">
+            <div className="w-[2rem] h-[2rem]">
+              <LinkUp className="w-full h-full" />
+            </div>
+            <p className="text-white font-medium text-base text-center">
+              Open an Account
+            </p>
+          </div>
+        </Link>
+
+        <div className="absolute -left-[12%] top-[48%] z-10 w-[16rem] h-[16rem] overflow-hidden">
+          <MoneyLeft className="w-full h-full" />
+        </div>
+
+        <div className="absolute -right-[18%] top-[50%] z-10 w-[20rem] h-[20rem] overflow-hidden">
+          <MoneyRight className="w-full h-full" />
+        </div>
+
+
+        <div className="absolute top-[20%] -left-[6%] w-[2rem] h-[2rem]">
+          <Star color="#FFDA46" className="w-full h-full" delay={0.2} />
+        </div>
+
+        <div className="absolute top-[33%] -right-[2%] w-[2.5rem] h-[2.5rem]">
+          <Star color="#74F0FF" className="w-full h-full" delay={0.6} duration={1.6} />
+        </div>
+
+        <div className="absolute -bottom-[20%] -left-[15%] w-[1.5rem] h-[1.5rem]">
+          <Star color="#FFDA46" className="w-full h-full" delay={0.2} />
+        </div>
+
+        <div className="absolute -bottom-[25%] left-[50%] w-[2.5rem] h-[2.5rem]">
+          <Star color="#FFDA46" className="w-full h-full" delay={0.2} />
+        </div>
+
+        <div className="absolute -bottom-[50%] -right-[15%] w-[2.2rem] h-[2.2rem]">
+          <Star color="#FFDA46" className="w-full h-full" delay={0.6} duration={1.6} />
+        </div>
+
+        <div className="absolute -bottom-[110%] left-[40%] w-[2.2rem] h-[2.2rem]">
+          <Star color="#FFDA46" className="w-full h-full" delay={0.6} duration={1.6} />
+        </div>
+      </section>
+
+
+      <section className="w-full relative ">
+        {/* <RocketPath className="absolute top-0 w-[97.5rem] h-[51.6rem]" duration={4} delay={0.2} />
+        <div className="w-full flex items-start justify-between relative z-20">
+          <POSHand />
+          <ATMHand />
+        </div> */}
+        <HandsSectionSynced />
+      </section>
+    </main>
   );
 }

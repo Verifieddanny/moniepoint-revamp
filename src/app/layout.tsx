@@ -69,8 +69,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${onest.variable} antialiased`}>
+      <body className={`${onest.variable} antialiased overflow-x-hidden`}>
         {children}
+        <div className="w-full h-screen"></div>
       </body>
     </html>
   );
