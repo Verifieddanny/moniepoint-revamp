@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       "Moniepoint provides secure digital banking and payment solutions for individuals and businesses in Africa. Manage your money, grow your business.",
     images: [
       {
-        url: "/og-image.jpg",       // resolves against metadataBase
+        url: "/opengraph-image.jpg",       // resolves against metadataBase
         width: 1200,
         height: 630,
         alt: "Moniepoint Landing Page Preview",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Moniepoint, Simple, Smart Banking for Individuals & Businesses",
     description:
       "Manage money, accept payments, and grow your business with Moniepoint’s secure and modern banking solutions.",
-    images: ["/og-image.jpg"],      // absolute once rendered
+    images: ["/opengraph-image.jpg"],      // absolute once rendered
     creator: "@Moniepoint",
   },
 };
