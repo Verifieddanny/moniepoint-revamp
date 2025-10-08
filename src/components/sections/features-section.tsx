@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import LinkUp from "../illustrations/link-up";
 import { Cloud1, Cloud2, Cloud3 } from "../illustrations/cloud";
+import { generalSans } from "@/app/page";
 
 
 const cardVariants = {
@@ -39,14 +40,14 @@ export default function Features() {
                     />
                 </div>
 
-                <div className="w-full h-1/2 md:h-[37%] bg-accent bg-[url(/images/backgroun-spots.webp)] bg-cover bg-center flex md:flex-row flex-col md:justify-between md:p-[2rem] p-[1rem]">
-                    <p className="font-custom font-bold md:text-7xl text-3xl text-white md:tracking-[-0.1rem] tracking-tight md:w-[65%] w-full">
+                <div className="w-full h-1/2 md:h-[37%] bg-accent bg-[url(/images/backgroun-spots.webp)] bg-cover bg-center flex md:flex-row flex-col md:justify-between md:py-[2rem] md:px-[2rem] py-[1rem] px-[0.5rem]">
+                    <p className="font-bold md:text-7xl text-3xl text-white md:tracking-[-0.1rem] tracking-tight md:w-[65%] w-full">
                         POS machine wey
                         <br /> no get wahala.
                     </p>
 
-                    <div className="md:w-[35%] w-full">
-                        <p className="text-white font-custom tracking-tight md:text-base text-sm md:mt-0 mt-[1rem] md:mb-[2.5rem] mb-[1rem]">
+                    <div className={`md:w-[35%] w-full ${generalSans.className}`}>
+                        <p className="text-white tracking-tight md:text-base text-sm md:mt-0 mt-[1rem] md:mb-[2.5rem] mb-[1rem]">
                             Accept card and transfer payments seamlessly,
                             <br /> with a reliable point of sale terminal. Enjoy
                             <br /> instant settlement, easy dispute resolution, and
@@ -95,7 +96,7 @@ export default function Features() {
                     </motion.div>
 
                     <motion.div
-                        className="absolute -bottom-[10%] -left-[10%] w-[50rem] h-[25rem] pointer-events-none"
+                        className="absolute -bottom-[10%] -left-[70%] w-[50rem] h-[25rem] pointer-events-none"
                         animate={{ x: ["-120%", "120vw"] }}
                         transition={{ duration: 46, ease: "linear", repeat: Infinity, repeatType: "loop" }}
                     >
@@ -111,47 +112,24 @@ export default function Features() {
                     </motion.div>
 
                     <motion.div
-                        className="absolute -bottom-[5%] right-[50%] w-[50rem] h-[25rem] pointer-events-none"
-                        animate={{ x: ["-130%", "120vw"] }}
-                        transition={{ duration: 60, ease: "linear", repeat: Infinity, repeatType: "loop" }}
-                    >
-                        <Cloud2 />
-                    </motion.div>
-
-                    <motion.div
-                        className="absolute -bottom-[45%] right-0 w-[50rem] h-[25rem] pointer-events-none"
-                        animate={{ x: ["-150%", "120vw"] }}
-                        transition={{ duration: 64, ease: "linear", repeat: Infinity, repeatType: "loop" }}
-                    >
-                        <Cloud2 />
-                    </motion.div>
-
-                    <motion.div
                         className="absolute -bottom-[25%] -right-[8%] w-[50rem] h-[25rem] pointer-events-none"
                         animate={{ x: ["-140%", "120vw"] }}
                         transition={{ duration: 70, ease: "linear", repeat: Infinity, repeatType: "loop" }}
                     >
                         <Cloud3 />
                     </motion.div>
-
-                    <motion.div
-                        className="absolute -bottom-[25%] left-[45%] w-[50rem] h-[25rem] pointer-events-none"
-                        animate={{ x: ["-140%", "120vw"] }}
-                        transition={{ duration: 76, ease: "linear", repeat: Infinity, repeatType: "loop" }}
-                    >
-                        <Cloud3 />
-                    </motion.div>
+                    
                 </div>
 
-                <div className="w-full h-1/2 md:h-[37%] bg-accent bg-[url(/images/backgroun-spots.webp)] bg-cover bg-center flex md:flex-row flex-col md:justify-between md:p-[2rem] p-[1rem]">
-                    <p className="font-custom font-bold md:text-7xl text-3xl text-white md:tracking-[-0.1rem] tracking-tight md:w-[65%] w-full">
+                <div className="w-full h-1/2 md:h-[37%] bg-accent bg-[url(/images/backgroun-spots.webp)] bg-cover bg-center flex md:flex-row flex-col md:justify-between md:py-[2rem] md:px-[2rem] py-[1rem] px-[0.5rem]">
+                    <p className="font-bold md:text-7xl text-3xl text-white md:tracking-[-0.1rem] tracking-tight md:w-[65%] w-full">
                         Better card
                         <br />
                         for aktiv deals.
                     </p>
 
-                    <div className="md:w-[35%] w-full">
-                        <p className="text-white font-custom tracking-tight md:text-base text-sm md:mt-0 mt-[1rem] md:mb-[2.5rem] mb-[1rem]">
+                    <div className={`md:w-[35%] w-full ${generalSans.className}`}>
+                        <p className="text-white tracking-tight md:text-base text-sm md:mt-0 mt-[1rem] md:mb-[2.5rem] mb-[1rem]">
                             Order an expense card to spend and manage your
                             <br /> business finance effectively, and get it in 48hrs.
                             <br /> Track your business expenses and set limits for
@@ -191,15 +169,15 @@ export default function Features() {
                     />
                 </div>
 
-                <div className="w-full h-1/2 md:h-[37%] bg-accent bg-[url(/images/backgroun-spots.webp)] bg-cover bg-center flex md:flex-row flex-col md:justify-between md:p-[2rem] p-[1rem]">
-                    <p className="font-custom font-bold md:text-7xl text-3xl text-white md:tracking-[-0.1rem] tracking-tight md:w-[65%] w-full">
+                <div className="w-full h-1/2 md:h-[37%] bg-accent bg-[url(/images/backgroun-spots.webp)] bg-cover bg-center flex md:flex-row flex-col md:justify-between md:py-[2rem] md:px-[2rem] py-[1rem] px-[0.5rem]">
+                    <p className="font-bold md:text-7xl text-3xl text-white md:tracking-[-0.1rem] tracking-tight md:w-[65%] w-full">
                         You fit get
                         <br />
                         loan sharply
                     </p>
 
-                    <div className="md:w-[35%] w-full">
-                        <p className="text-white font-custom tracking-tight md:text-base text-sm md:mt-0 mt-[1rem] md:mb-[2.5rem] mb-[1rem]">
+                    <div className={`md:w-[35%] w-full ${generalSans.className}`}>
+                        <p className="text-white tracking-tight md:text-base text-sm md:mt-0 mt-[1rem] md:mb-[2.5rem] mb-[2rem]">
                             Access working capital loans to help your business
                             <br /> grow. Easy request process with business friendly
                             <br /> interest rates and repayment tenures.

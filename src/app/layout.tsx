@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Onest } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const onest = Onest({
@@ -7,6 +8,12 @@ const onest = Onest({
   variable: "--font-onest",
   display: "swap",
   weight: ["400", "500", "600", "700"],
+});
+
+export const generalSans = localFont({
+  src: "../../public/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Variable.woff2",
+  variable: "--font-general-sans",
+  weight: "100 900",
 });
 
 export const metadata: Metadata = {
@@ -23,7 +30,7 @@ export const metadata: Metadata = {
       "Moniepoint provides secure digital banking and payment solutions for individuals and businesses in Africa. Manage your money, grow your business.",
     images: [
       {
-        url: "/opengraph-image.jpg",       // resolves against metadataBase
+        url: "/opengraph-image.jpg",
         width: 1200,
         height: 630,
         alt: "Moniepoint Landing Page Preview",
@@ -35,7 +42,7 @@ export const metadata: Metadata = {
     title: "Moniepoint, Simple, Smart Banking for Individuals & Businesses",
     description:
       "Manage money, accept payments, and grow your business with Moniepoint’s secure and modern banking solutions.",
-    images: ["/opengraph-image.jpg"],      // absolute once rendered
+    images: ["/opengraph-image.jpg"],
     creator: "@Moniepoint",
   },
 };
@@ -48,7 +55,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${onest.variable} antialiased overflow-x-hidden`}>
+      <body className={`${onest.className} antialiased overflow-x-hidden w-screen`}>
         {children}
       </body>
     </html>
