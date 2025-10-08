@@ -1,0 +1,91 @@
+"use client"
+import Image from 'next/image'
+import React from 'react'
+import { motion } from "motion/react";
+
+
+function CoinRight() {
+    return (
+        <motion.div
+            className="
+        absolute md:right-[1rem] md:-top-[2rem] -right-[1rem] top-[6rem]
+        md:w-[14rem] md:h-[9.3rem] w-[8rem] h-[6rem]
+        transform-gpu will-change-transform pointer-events-none select-none
+      "
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 2.2, repeat: Infinity, repeatType: "loop", ease: "easeInOut" }}
+            style={{ translateZ: 0 }}
+        >
+            <Image
+                src="/images/coin-right.webp"
+                alt=""
+                width={224} height={149}   /* approximate aspect, avoids fill reflow */
+                draggable={false}
+                className="h-full w-auto"
+            />
+        </motion.div>
+    );
+}
+
+function MoneyRight() {
+    return (
+        <motion.div className="
+        absolute md:right-[11rem] -top-[1rem] -right-[4rem]
+        md:w-[18rem] md:h-[18rem] w-[12rem] h-[12rem]
+        overflow-hidden z-20 transform-gpu will-change-transform pointer-events-none select-none
+      " animate={{ y: [0, -20, 0] }}
+            transition={{
+                duration: 2,
+                repeat: Infinity,
+                repeatType: "loop",
+                ease: "easeInOut"
+            }}>
+
+            <svg
+                width="826"
+                height="744"
+                viewBox="0 0 826 744"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="w-full h-full"
+
+            >
+                <path
+                    d="M254.486 496.864L339.019 618.229C339.019 618.229 250.408 619.269 238.131 570.944C229.221 535.874 254.486 496.864 254.486 496.864Z"
+                    fill="#037D33"
+                />
+                <path
+                    d="M564.398 434.472C643.32 431.658 713.863 332.361 713.863 332.361L580.986 147.775C580.986 147.775 510.443 247.072 431.52 249.886C343.437 253.027 299.058 172.476 194.274 244.923C72.3945 329.191 119.754 410.766 119.754 410.766L250.273 592.076C251.679 594.227 252.631 595.352 252.631 595.352L250.273 592.076C240.413 576.995 208.254 511.513 325.768 430.264C430.552 357.817 466.449 437.965 564.398 434.472Z"
+                    fill="#BBFF70"
+                />
+                <ellipse
+                    cx="103"
+                    cy="57"
+                    rx="103"
+                    ry="57"
+                    transform="matrix(-0.968982 -0.24713 -0.24713 0.968982 443.137 280.289)"
+                    fill="#E3FFC5"
+                />
+                <path
+                    d="M658.157 247.409C633.353 262.938 614.249 287.661 606.446 318.256C597.636 352.801 605.058 387.674 623.926 414.815C627.453 412.899 630.921 410.866 634.322 408.736C616.972 384.246 610.075 352.584 618.074 321.222C625.152 293.468 642.583 271.095 665.185 257.173L658.157 247.409Z"
+                    fill="#FEFEFE"
+                />
+                <path
+                    d="M615.088 191.018C601.356 196.583 586.233 199.345 570.463 198.62C559.157 198.1 548.347 195.825 538.282 192.074C535.094 195.045 531.765 198.03 528.308 200.989C541.115 206.554 555.133 209.927 569.912 210.607C588.506 211.461 606.291 207.963 622.284 201.014L615.088 191.018Z"
+                    fill="#FEFEFE"
+                />
+                <path
+                    d="M513.442 218.756C490.146 235.577 462.894 249.02 434.562 250.031C401.896 251.196 375.24 240.85 349.286 231.066C349.286 231.066 346.764 247.455 355.373 298.672C362.817 342.952 396.366 374.659 415.981 400.1C454.354 401.863 485.889 423.72 529.377 431.774C529.377 431.774 489.74 365.485 486.628 323.891C483.517 282.297 513.442 218.756 513.442 218.756Z"
+                    fill="#037D33"
+                />
+                <path
+                    d="M349.845 256.496C350.71 266.71 352.359 280.458 355.401 298.554C360.078 326.375 373.764 347.931 388.97 367.24C410.061 361.939 425.132 350.883 429.08 335.406C436.551 306.113 401.456 271.636 349.845 256.496Z"
+                    fill="#00F460"
+                />
+            </svg>
+        </motion.div>
+
+    );
+}
+
+export { CoinRight, MoneyRight }
