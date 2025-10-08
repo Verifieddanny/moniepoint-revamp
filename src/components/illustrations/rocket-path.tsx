@@ -7,6 +7,7 @@ import {
   useMotionValueEvent,
   animate,
   type MotionValue,
+  useTransform,
 } from "motion/react";
 import { easeInOut } from "motion/react";
 
@@ -25,6 +26,7 @@ export default function RocketPath({
 }: Props) {
   const pathRef = useRef<SVGPathElement | null>(null);
   const [len, setLen] = useState(0);
+  
 
   // use external progress if provided, else create internal
   const internalProgress = useMotionValue(0);
@@ -45,6 +47,7 @@ export default function RocketPath({
 
   useMotionValueEvent(progress, "change", (p) => setPose(poseFrom(p)));
 
+  const rocketOpacity = useTransform(progress, [0, 0.02], [0, 1]);
   useLayoutEffect(() => {
     if (!pathRef.current) return;
     setLen(pathRef.current.getTotalLength());
@@ -93,7 +96,7 @@ export default function RocketPath({
       />
 
       {/* Rocket rides along the path */}
-      <g transform={`translate(${pose.x}, ${pose.y}) rotate(${pose.angle})`}>
+      <motion.g transform={`translate(${pose.x}, ${pose.y}) rotate(${pose.angle})`} style={{ opacity: rocketOpacity }}>
         {/* rebase and scale so the nose sits on the path */}
         <g transform="translate(-2350, -230) scale(0.8)">
           <path d="M2969.71 247.825L3001.77 213.891L3003.86 213.097L3111.58 298.97L3119.27 305.646L3119.07 306.09L2999.33 236.586L2969.71 247.825Z" fill="#6FD400" />
@@ -101,7 +104,7 @@ export default function RocketPath({
           <path d="M2998.28 260.639L2969.72 247.866L2999.53 236.371L3001.72 238.7L2998.28 260.639Z" fill="#468600" />
           <path d="M3120.44 306.437L2999.38 236.426L2988.03 299.534L3120.44 306.437Z" fill="#BBFF70" />
         </g>
-      </g>
+      </motion.g>
     </svg>
   );
 }

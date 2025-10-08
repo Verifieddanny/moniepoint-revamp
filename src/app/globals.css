@@ -10,6 +10,7 @@
   --background: #FFFFFF;
   --button: #002C88;
   --accent: #2191FF;
+  --grays: ##696969;
 
   /* ===== Gradients ===== */
   --gradient-start: #B36AE9; 
@@ -27,6 +28,7 @@
   --color-foreground: var(--primary);
   --color-button: var(--button);
   --color-accent: var(--accent);
+  --color-grays: var(--grays);
 
   /* Gradient colors */
   --color-gradient-start: var(--gradient-start);
@@ -51,67 +53,23 @@
   }
 }
 
-button {
-  @apply cursor-pointer;
+
+@keyframes cloudMove1 {
+  0%   { transform: translateX(-120%); }
+  100% { transform: translateX(120vw); }
+}
+@keyframes cloudMove2 {
+  0%   { transform: translateX(-150%); }
+  100% { transform: translateX(120vw); }
+}
+@keyframes cloudMove3 {
+  0%   { transform: translateX(-180%); }
+  100% { transform: translateX(120vw); }
 }
 
-.btn-primary {
-  @apply bg-primary text-white hover:bg-primary/90;
-}
+.animate-cloudMove1 { animation: cloudMove1 40s linear infinite; }
+.animate-cloudMove2 { animation: cloudMove2 55s linear infinite; }
+.animate-cloudMove3 { animation: cloudMove3 70s linear infinite; }
 
-.btn-secondary {
-  @apply bg-secondary text-white hover:bg-secondary/90;
-}
 
-.accent {
-  @apply text-primary;
-}
 
-/* Gradient button */
-.btn-gradient {
-  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-middle) 50%, var(--gradient-end) 100%);
-  @apply text-white font-medium rounded-xl px-6 py-3 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98];
-}
-
-.btn-gradient-two {
-  background: linear-gradient(135deg, var(--gradient-start-two) 0%, var(--gradient-end-two) 100%);
-  @apply text-white font-medium rounded-xl px-6 py-3 transition-all duration-200 hover:shadow-lg hover:scale-[1.02] active:scale-[0.98];
-}
-
-.background-gradient {
-  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-middle) 50%, var(--gradient-end) 100%);
-  @apply text-white;
-}
-
-.background-gradient-two {
-  background: linear-gradient(135deg, var(--gradient-start-two) 0%, var(--gradient-end-two) 100%);
-  @apply text-white;
-}
-
-/* Alternative gradient directions */
-.gradient-horizontal {
-  background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-middle) 50%, var(--gradient-end) 100%);
-}
-
-.gradient-vertical {
-  background: linear-gradient(180deg, var(--gradient-start) 0%, var(--gradient-middle) 50%, var(--gradient-end) 100%);
-}
-
-.gradient-diagonal {
-  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-middle) 50%, var(--gradient-end) 100%);
-}
-
-/* Gradient text */
-.text-gradient {
-  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-middle) 50%, var(--gradient-end) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.text-gradient-2 {
-  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-start) 50%, var(--gradient-middle) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}

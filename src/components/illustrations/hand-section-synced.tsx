@@ -15,7 +15,7 @@ import ATMHand from "@/components/illustrations/atm-hand";
 
 export default function HandsSectionSynced() {
   const ref = useRef<HTMLElement | null>(null);
-  const inView = useInView(ref, { amount: 0.3, once: true }); // fire once when 30% is visible
+  const inView = useInView(ref, { amount: 0.3, once: true }); 
 
   // one clock for the whole scene
   const progress = useMotionValue(0);
@@ -23,7 +23,7 @@ export default function HandsSectionSynced() {
   useEffect(() => {
   let controls: ReturnType<typeof animate> | undefined;
   if (inView) {
-    controls = animate(progress, 1, { duration: 4, ease: easeInOut, delay: 0.2 });
+    controls = animate(progress, 1, { duration: 5.3, ease: easeInOut, delay: 0.2 });
   } else {
     progress.set(0);
   }
@@ -44,16 +44,16 @@ export default function HandsSectionSynced() {
     <section ref={ref} className="w-full relative overflow-x-hidden">
       {/* Rocket path reads the same shared progress */}
       <RocketPath
-        className="absolute top-0 w-[97.5rem] h-[51.6rem]"
+        className="absolute top-0 w-[100vw] md:h-[51.6rem] h-[14.82rem]"
         progressMV={progress}
       />
 
       <div className="w-full flex items-start justify-between relative z-20">
-        <motion.div style={{ x: posX, opacity: posOpacity }} className={`mt-[8rem] ${perf}`}>
+        <motion.div style={{ x: posX, opacity: posOpacity }} className={`md:mt-[8rem] mt-[4rem] ${perf}`}>
           <POSHand />
         </motion.div>
 
-        <motion.div style={{ x: atmX, opacity: atmOpacity }} className={`mt-[19rem] ${perf}`}>
+        <motion.div style={{ x: atmX, opacity: atmOpacity }} className={`md:mt-[19rem] mt-[7rem] ${perf}`}>
           <ATMHand />
         </motion.div>
       </div>
