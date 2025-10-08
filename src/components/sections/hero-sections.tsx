@@ -15,7 +15,7 @@ function Hero() {
         <main className="flex md:min-h-screen flex-col relative pt-12 md:pt-[3rem] w-full">
             {/* Curved bottom background */}
             <div className="absolute w-[100vw] h-[20dvh] bg-primary -z-10 md:hidden left-0 top-0"></div>
-            <div className=" absolute left-1/2 -translate-x-1/2 bottom-[8vh] w-[200vw] h-[200vw] bg-primary rounded-full z-0" />
+            <div className=" absolute left-1/2 -translate-x-1/2 md:bottom-[8vh] -bottom-[8vh] md:w-[200vw] md:h-[200vw] w-[250vw] h-[250vh] bg-primary rounded-full z-0" />
 
             <section className="w-full max-w-[90%] md:max-w-[1300px] mx-auto flex flex-col items-center text-center relative">
                 {/* Logo */}
@@ -24,22 +24,22 @@ function Hero() {
                 </div>
 
                 {/* Headline */}
-                <p className="text-white font-bold md:tracking-[-0.5rem] tracking-tight leading-[106%] text-4xl md:text-7xl lg:text-[8.3125rem] mb-10">
+                <p className="text-white font-bold md:tracking-[-0.5rem] tracking-tight leading-[106%] text-4xl md:text-7xl lg:text-[8.3125rem] md:mb-10 mb-[3.5rem]">
                     Simple solutions
                     <br /> to power your
                     <br /> business
                 </p>
 
                 {/* Subtitle */}
-                <p className={`text-white font-medium text-sm md:text-base mb-12 tracking-tight ${generalSans.className}`}>
-                    Collect payments, access loans and manage operations with a <br className="hidden md:block" />
-                    business banking solution that meets all your needs.
+                <p className={`text-white font-medium text-xs md:text-base mb-12 tracking-tight ${generalSans.className}`}>
+                    Collect payments, access loans and manage <br className="block md:hidden" /> operations with a <br className="hidden md:block" />
+                    business banking solution<br className="block md:hidden" /> that meets all your needs.
                 </p>
 
 
                 <Link href="">
-                    <div className="bg-button rounded-[0.5rem] py-[0.75rem] px-[1rem] flex items-center gap-x-2 hover:bg-accent transition-colors ease-in-out duration-300">
-                        <div className="md:w-[2rem] md:h-[2rem] w-[1rem] h-[1rem]">
+                    <div className="bg-button md:rounded-[0.5rem] rounded-full py-[0.75rem] px-[1rem] flex items-center gap-x-2 hover:bg-accent transition-colors ease-in-out duration-300">
+                        <div className="md:w-[2rem] md:h-[2rem] w-[1rem] h-[1rem] md:block hidden">
                             <LinkUp className="w-full h-full" />
                         </div>
                         <p className={`text-white font-medium text-base text-center ${generalSans.className}`}>
@@ -73,7 +73,7 @@ function Hero() {
                     <Star color="#FFDA46" className="w-full h-full" delay={0.6} duration={1.6} />
                 </div>
 
-                <div className="absolute md:-bottom-[110%] -bottom-[53%] left-[40%] md:w-[2.2rem] md:h-[2.2rem] w-[0.6rem] h-[0.6rem]">
+                <div className="absolute md:-bottom-[110%] -bottom-[80%] left-[40%] md:w-[2.2rem] md:h-[2.2rem] w-[0.6rem] h-[0.6rem]">
                     <Star color="#FFDA46" className="w-full h-full" delay={0.6} duration={1.6} />
                 </div>
             </section>
