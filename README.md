@@ -3,7 +3,7 @@
 This is a modern, responsive landing page revamp for **[Moniepoint](https://moniepoint-revamp.vercel.app/)** built with **Next.js App Router**, **Tailwind CSS**, and the **Onest font**.  
 It is optimized for performance, accessibility, SEO, and beautiful user experience.
 
-![Moniepoint Preview](public/og-image.jpg)
+![Moniepoint Preview](public/opengraph-image.jpg)
 
 ---
 
