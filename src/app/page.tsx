@@ -13,10 +13,10 @@ export const generalSans = localFont({
 
 export default function Home() {
   return (
-    <>
+    <main className="w-full overflow-x-hidden">
     <Hero />
     <FreeBank />
     <Features />
-    </>
+    </main>
   );
 }

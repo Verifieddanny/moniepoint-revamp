@@ -93,6 +93,7 @@ export default function RocketPath({
         strokeWidth="24"
         strokeLinecap="round"
         {...pathProps}
+        className="hidden"
       />
 
       {/* Rocket rides along the path */}
