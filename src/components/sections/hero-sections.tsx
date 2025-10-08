@@ -1,3 +1,7 @@
+// import { General_Sans } from "next/font/google";
+// const generalSans = General_Sans({ subsets: ["latin"], weight: ["400","500","700"] });
+
+import { generalSans } from "@/app/page";
 import HandsSectionSynced from "@/components/illustrations/hand-section-synced";
 import LinkUp from "@/components/illustrations/link-up";
 import MoneyLeft from "@/components/illustrations/money-left";
@@ -20,14 +24,14 @@ function Hero() {
                 </div>
 
                 {/* Headline */}
-                <p className="font-custom text-white font-bold md:tracking-[-0.5rem] tracking-tight leading-[106%] text-4xl md:text-7xl lg:text-[8.3125rem] mb-10">
+                <p className="text-white font-bold md:tracking-[-0.5rem] tracking-tight leading-[106%] text-4xl md:text-7xl lg:text-[8.3125rem] mb-10">
                     Simple solutions
                     <br /> to power your
                     <br /> business
                 </p>
 
                 {/* Subtitle */}
-                <p className="text-white font-medium text-sm md:text-base mb-12 tracking-tight">
+                <p className={`text-white font-medium text-sm md:text-base mb-12 tracking-tight ${generalSans.className}`}>
                     Collect payments, access loans and manage operations with a <br className="hidden md:block" />
                     business banking solution that meets all your needs.
                 </p>
@@ -38,7 +42,7 @@ function Hero() {
                         <div className="md:w-[2rem] md:h-[2rem] w-[1rem] h-[1rem]">
                             <LinkUp className="w-full h-full" />
                         </div>
-                        <p className="text-white font-medium text-base text-center">
+                        <p className={`text-white font-medium text-base text-center ${generalSans.className}`}>
                             Open an Account
                         </p>
                     </div>
@@ -49,27 +53,27 @@ function Hero() {
                 <MoneyRight />
 
 
-                <div className="absolute top-[20%] min-[1300px]:-left-[6%] md:left-[6%] left-[1%] md:w-[2rem] md:h-[2rem] w-[1rem] h-[1rem]">
+                <div className="absolute top-[20%] min-[1300px]:-left-[6%] md:left-[6%] left-[1%] md:w-[2rem] md:h-[2rem] w-[0.5rem] h-[0.5rem]">
                     <Star color="#FFDA46" className="w-full h-full" delay={0.2} />
                 </div>
 
-                <div className="absolute top-[33%] min-[1300px]:-right-[2%] right-[2%] md:w-[2.5rem] md:h-[2.5rem] w-[1.5rem] h-[1.5rem]">
+                <div className="absolute top-[33%] min-[1300px]:-right-[2%] right-[2%] md:w-[2.5rem] md:h-[2.5rem] w-[0.75rem] h-[0.75rem]">
                     <Star color="#74F0FF" className="w-full h-full" delay={0.6} duration={1.6} />
                 </div>
 
-                <div className="absolute -bottom-[20%] min-[1300px]:-left-[15%] left-[3%] md:w-[1.5rem] md:h-[1.5rem] w-[0.5rem] h-[0.5rem]">
+                <div className="absolute -bottom-[20%] min-[1300px]:-left-[15%] left-[3%] md:w-[1.5rem] md:h-[1.5rem] w-[0.45rem] h-[0.45rem]">
                     <Star color="#FFDA46" className="w-full h-full" delay={0.2} />
                 </div>
 
-                <div className="absolute -bottom-[25%] left-[50%] md:w-[2.5rem] md:h-[2.5rem] w-[1.5rem] h-[1.5rem]">
+                <div className="absolute -bottom-[25%] left-[50%] md:w-[2.5rem] md:h-[2.5rem] w-[0.75rem] h-[0.75rem]">
                     <Star color="#FFDA46" className="w-full h-full" delay={0.2} />
                 </div>
 
-                <div className="absolute -bottom-[50%] min-[1300px]:-right-[15%] right-[3%] md:w-[2.2rem] md:h-[2.2rem] w-[1.2rem] h-[1.2rem]">
+                <div className="absolute -bottom-[50%] min-[1300px]:-right-[15%] right-[3%] md:w-[2.2rem] md:h-[2.2rem] w-[0.6rem] h-[0.6rem]">
                     <Star color="#FFDA46" className="w-full h-full" delay={0.6} duration={1.6} />
                 </div>
 
-                <div className="absolute md:-bottom-[110%] -bottom-[53%] left-[40%] md:w-[2.2rem] md:h-[2.2rem] w-[1.2rem] h-[1.2rem]">
+                <div className="absolute md:-bottom-[110%] -bottom-[53%] left-[40%] md:w-[2.2rem] md:h-[2.2rem] w-[0.6rem] h-[0.6rem]">
                     <Star color="#FFDA46" className="w-full h-full" delay={0.6} duration={1.6} />
                 </div>
             </section>

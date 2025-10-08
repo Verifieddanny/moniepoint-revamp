@@ -1,16 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  /* ===== Font ===== */
-  --font-custom: var(--font-onest); 
-
   /* ===== Colors ===== */
   --primary: #001335;
   --secondary: #0A70FF;
   --background: #FFFFFF;
   --button: #002C88;
   --accent: #2191FF;
-  --grays: ##696969;
+  --grays: #696969;
 
   /* ===== Gradients ===== */
   --gradient-start: #B36AE9; 
@@ -38,9 +35,10 @@
   --color---gradient-end-two: var(--gradient-end-two);
 
   /* Fonts */
-  --font-custom: var(--font-custom);
-  --font-sans: var(--font-onest); 
+  /* --font-custom: var(--font-custom);
+  --font-sans: var(--font-onest);  */
 }
+
 
 @layer base {
   * {
@@ -48,10 +46,10 @@
   }
 
   body {
-    font-family: var(--font-custom, Arial, Helvetica, sans-serif);
     @apply bg-background text-foreground;
   }
 }
+
 
 
 @keyframes cloudMove1 {
