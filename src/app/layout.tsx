@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Onest } from "next/font/google";
-import localFont from "next/font/local";
 import "./globals.css";
 
 const onest = Onest({
@@ -10,11 +9,6 @@ const onest = Onest({
   weight: ["400", "500", "600", "700"],
 });
 
-export const generalSans = localFont({
-  src: "../../public/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Variable.woff2",
-  variable: "--font-general-sans",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Moniepoint, Simple, Smart Banking for Individuals & Businesses",
@@ -55,7 +49,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${onest.className} antialiased overflow-x-hidden w-screen`}>
+      <body className={`${onest.className} antialiased`}>
         {children}
       </body>
     </html>

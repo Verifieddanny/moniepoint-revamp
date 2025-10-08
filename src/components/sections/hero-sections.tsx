@@ -12,7 +12,7 @@ import Link from "next/link";
 
 function Hero() {
     return (
-        <main className="flex md:min-h-screen flex-col relative pt-12 md:pt-[3rem]">
+        <main className="flex md:min-h-screen flex-col relative pt-12 md:pt-[3rem] w-full">
             {/* Curved bottom background */}
             <div className="absolute w-[100vw] h-[20dvh] bg-primary -z-10 md:hidden left-0 top-0"></div>
             <div className=" absolute left-1/2 -translate-x-1/2 bottom-[8vh] w-[200vw] h-[200vw] bg-primary rounded-full z-0" />
