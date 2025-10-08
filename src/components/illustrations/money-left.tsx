@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 function MoneyLeft() {
   return (
-    <motion.div className="absolute -left-[1%] min-[1300px]:-left-[12%] top-[42%] md:top-[48%] z-10 w-[6rem] h-[6rem] md:w-[14rem] md:h-[14rem] min-[1300px]:w-[16rem] min-[1300px]:h-[16rem] overflow-hidden" animate={{ y: [0, -20, 0] }}
+    <motion.div className="absolute -left-[1%] min-[1300px]:-left-[12%] top-[42%] md:top-[48%] z-10 w-[4rem] h-[4rem] md:w-[14rem] md:h-[14rem] min-[1300px]:w-[16rem] min-[1300px]:h-[16rem] overflow-hidden" animate={{ y: [0, -20, 0] }}
       transition={{
         duration: 2,
         repeat: Infinity,

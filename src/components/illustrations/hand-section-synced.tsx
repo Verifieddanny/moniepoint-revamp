@@ -41,7 +41,7 @@ export default function HandsSectionSynced() {
   const perf = "transform-gpu will-change-transform";
 
   return (
-    <section ref={ref} className="w-full relative overflow-x-hidden">
+    <section ref={ref} className="w-full relative overflow-x-hidden md:mt-0 mt-[15vh]">
       {/* Rocket path reads the same shared progress */}
       <RocketPath
         className="absolute top-0 w-[100vw] md:h-[51.6rem] h-[14.82rem]"
@@ -49,11 +49,11 @@ export default function HandsSectionSynced() {
       />
 
       <div className="w-full flex items-start justify-between relative z-20">
-        <motion.div style={{ x: posX, opacity: posOpacity }} className={`md:mt-[8rem] mt-[4rem] ${perf}`}>
+        <motion.div style={{ x: posX, opacity: posOpacity }} className={`md:mt-[8rem] mt-[2rem] ${perf}`}>
           <POSHand />
         </motion.div>
 
-        <motion.div style={{ x: atmX, opacity: atmOpacity }} className={`md:mt-[19rem] mt-[7rem] ${perf}`}>
+        <motion.div style={{ x: atmX, opacity: atmOpacity }} className={`md:mt-[19rem] mt-[4rem] ${perf}`}>
           <ATMHand />
         </motion.div>
       </div>

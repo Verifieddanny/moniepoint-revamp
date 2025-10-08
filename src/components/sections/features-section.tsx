@@ -55,7 +55,7 @@ export default function Features() {
                         </p>
 
                         <Link href="">
-                            <div className="bg-primary rounded-[0.5rem] py-[0.75rem] px-[1rem] flex items-center gap-x-2 hover:bg-accent transition-colors ease-in-out duration-300 md:w-fit justify-center">
+                            <div className="bg-primary rounded-[0.5rem] py-[0.75rem] px-[1rem] flex items-center gap-x-2 hover:bg-button transition-colors ease-in-out duration-300 md:w-fit justify-center">
                                 <p className="text-white font-medium text-base text-center">
                                     Open an Account
                                 </p>
@@ -137,7 +137,7 @@ export default function Features() {
                         </p>
 
                         <Link href="">
-                            <div className="bg-primary rounded-[0.5rem] py-[0.75rem] px-[1rem] flex items-center gap-x-2 hover:bg-accent transition-colors ease-in-out duration-300 md:w-fit justify-center">
+                            <div className="bg-primary rounded-[0.5rem] py-[0.75rem] px-[1rem] flex items-center gap-x-2 hover:bg-button transition-colors ease-in-out duration-300 md:w-fit justify-center">
                                 <p className="text-white font-medium text-base text-center">
                                     Get a Card
                                 </p>
@@ -156,15 +156,15 @@ export default function Features() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.2 }}
-                className="w-[90%] h-[32.75rem] md:h-[41rem] rounded-[1rem] overflow-hidden flex flex-col transform-gpu will-change-transform"
+                className="w-[90%] h-[32.75rem] md:h-[45rem] rounded-[1rem] overflow-hidden flex flex-col transform-gpu will-change-transform"
             >
-                <div className="w-full h-1/2 md:h-[63%] relative">
+                <div className="w-full h-1/2 md:h-[63%] relative overflow-hidden">
                     <Image
                         src="/images/you-fit-get-loan-sharply.webp"
                         alt="you-fit-get-loan-sharply"
                         quality={90}
                         fill
-                        className="object-cover w-full h-full object-center"
+                        className="object-cover object-[top_2rem] w-full h-auto "
                         sizes="(min-width: 1024px) 1170px, 90vw"
                     />
                 </div>
@@ -184,7 +184,7 @@ export default function Features() {
                         </p>
 
                         <Link href="">
-                            <div className="bg-primary rounded-[0.5rem] py-[0.75rem] px-[1rem] flex items-center gap-x-2 hover:bg-accent transition-colors ease-in-out duration-300 md:w-fit justify-center">
+                            <div className="bg-primary rounded-[0.5rem] py-[0.75rem] px-[1rem] flex items-center gap-x-2 hover:bg-button transition-colors ease-in-out duration-300 md:w-fit justify-center">
                                 <p className="text-white font-medium text-base text-center">
                                     Open an Account
                                 </p>
