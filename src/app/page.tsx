@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import Features from "@/components/sections/features-section";
 import FreeBank from "@/components/sections/free-bank-account-section";
 import Hero from "@/components/sections/hero-sections";
+import CoinMoney from "@/components/sections/coin-money-section";
+import Testimonial from "@/components/sections/testimonial";
 
 export const generalSans = localFont({
   src: "../../public/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Variable.woff2",
@@ -13,10 +15,12 @@ export const generalSans = localFont({
 
 export default function Home() {
   return (
-    <main className="w-full overflow-x-hidden">
+    <main className="w-full h-fit overflow-x-hidden no-scroll">
     <Hero />
     <FreeBank />
     <Features />
+    <CoinMoney />
+    <Testimonial />
     </main>
   );
 }
