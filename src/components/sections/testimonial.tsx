@@ -107,7 +107,7 @@ function Testimonial() {
                   <p className="text-primary font-bold md:text-7xl text-2xl md:tracking-[-0.2rem] tracking-tight">
                     {current.name}
                   </p>
-                  <p className="text-primary font-medium md:text-xl md:mt-[2rem] mt-[0.5rem] text-[1.125rem] tracking-[-0.02rem]">
+                  <p className="text-primary font-medium md:text-xl md:mt-[2rem] text-base tracking-[-0.02rem]">
                     {current.role}
                   </p>
                 </div>
