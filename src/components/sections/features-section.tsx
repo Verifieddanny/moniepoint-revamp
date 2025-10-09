@@ -1,32 +1,47 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import LinkUp from "../illustrations/link-up";
 import { Cloud } from "../illustrations/cloud";
 import { generalSans } from "@/app/page";
+import { useRef } from "react";
 
 
 const cardVariants = {
-    hidden: { opacity: 0, y: 24 },
+    hidden: { opacity: 0, y: 22, filter: "blur(6px)" },
     show: {
         opacity: 1,
         y: 0,
-        transition: { type: "spring" as const, stiffness: 180, damping: 22, mass: 0.6 }
+        filter: "blur(0px)",
+        transition: { type: "spring" as const, stiffness: 140, damping: 20, mass: 0.7 }
     }
 };
 
+
 export default function Features() {
+    const firstRef = useRef<HTMLDivElement | null>(null);
+    const { scrollYProgress: firstP } = useScroll({
+        target: firstRef,
+        offset: ["start 90%", "start 45%"],
+    });
+
+    // map scroll -> styles
+    const firstY = useTransform(firstP, [0, 1], [24, 0]);
+    const firstOpacity = useTransform(firstP, [0, 1], [0, 1]);
+    // const firstBlur = useTransform(firstP, [0, 1], [6, 0], { clamp: false });
     return (
         <main className="w-screen min-h-screen md:py-[5rem] py-[2.5rem] flex flex-col items-center max-w-[1300px] mx-auto">
             {/* Card 1 */}
             <motion.div
-                variants={cardVariants}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.2 }}
-                className="w-[90%] h-[32.75rem] md:h-[41rem] rounded-[1rem] overflow-hidden flex flex-col md:mb-[5rem] mb-[2.5rem] transform-gpu will-change-transform"
+                ref={firstRef}
+                style={{
+                    y: firstY,
+                    opacity: firstOpacity,
+                    willChange: "transform, opacity",
+                }}
+                className="w-[90%] h-[32.75rem] md:h-[41rem] rounded-[1rem] overflow-hidden flex flex-col md:mb-[5rem] mb-[2.5rem] transform-gpu"
             >
                 <div className="w-full h-1/2 md:h-[63%] relative">
                     <Image
@@ -34,9 +49,9 @@ export default function Features() {
                         alt="pos-machine-wey-no-get-wahala"
                         quality={90}
                         fill
-                        className="object-cover w-full h-full object-center"
+                        priority
                         sizes="(min-width: 1024px) 1170px, 90vw"
-                        priority={false}
+                        className="object-cover w-full h-full object-center"
                     />
                 </div>
 
@@ -73,7 +88,7 @@ export default function Features() {
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.22, margin: "10% 0% -10% 0%" }}
                 className="w-[90%] h-[32.75rem] md:h-[41rem] rounded-[1rem] overflow-hidden flex flex-col md:mb-[5rem] mb-[2.5rem] transform-gpu will-change-transform"
             >
                 <div className="w-full h-1/2 md:h-[63%] relative overflow-hidden">
@@ -82,6 +97,7 @@ export default function Features() {
                         alt="better-card-for-active-deals"
                         quality={90}
                         fill
+                        priority
                         className="object-cover w-full h-full object-center"
                         sizes="(min-width: 1024px) 1170px, 90vw"
                     />
@@ -103,7 +119,7 @@ export default function Features() {
                         <Cloud />
                     </motion.div>
 
-                     <motion.div
+                    <motion.div
                         className="absolute md:-bottom-[10%] top-[10%] md:left-[105rem] left-[52.5rem] md:w-[100rem] md:h-[25rem] w-[50rem] h-[12.5rem] pointer-events-none"
                         animate={{ x: ["-120%", "120vw"] }}
                         transition={{ duration: 46, ease: "linear", repeat: Infinity, repeatType: "loop" }}
@@ -111,7 +127,7 @@ export default function Features() {
                         <Cloud />
                     </motion.div>
 
-                    
+
                 </div>
 
                 <div className="w-full h-1/2 md:h-[37%] bg-accent bg-[url(/images/backgroun-spots.webp)] bg-cover bg-center flex md:flex-row flex-col md:justify-between md:py-[2rem] md:px-[2rem] py-[1rem] px-[0.5rem]">
@@ -148,7 +164,7 @@ export default function Features() {
                 variants={cardVariants}
                 initial="hidden"
                 whileInView="show"
-                viewport={{ once: true, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.22, margin: "10% 0% -10% 0%" }}
                 className="w-[90%] h-[32.75rem] md:h-[45rem] rounded-[1rem] overflow-hidden flex flex-col transform-gpu will-change-transform"
             >
                 <div className="w-full h-1/2 md:h-[63%] relative overflow-hidden">
@@ -157,9 +173,12 @@ export default function Features() {
                         alt="you-fit-get-loan-sharply"
                         quality={90}
                         fill
+                        priority
                         className="object-cover object-[top_2rem] w-full h-auto "
                         sizes="(min-width: 1024px) 1170px, 90vw"
                     />
+                    {/* transition: { type: "tween", ease: "easeOut", duration: 0.5 }
+ */}
                 </div>
 
                 <div className="w-full h-1/2 md:h-[37%] bg-accent bg-[url(/images/backgroun-spots.webp)] bg-cover bg-center flex md:flex-row flex-col md:justify-between md:py-[2rem] md:px-[2rem] py-[1rem] px-[0.5rem]">

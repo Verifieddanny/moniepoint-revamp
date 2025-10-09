@@ -90,21 +90,22 @@ export default function Blogs() {
         {/* Scroll container */}
         <div
           ref={viewportRef}
-          className="w-full overflow-x-auto no-scroll overscroll-x-contain px-4 [scroll-snap-type:x_mandatory] scrollbar-none"
+          className=" w-full overflow-x-auto no-scroll overscroll-x-contain px-4 snap-x snap-mandatory [scroll-padding-inline:1rem] scrollbar-none"
         >
           <div
             className="
               grid gap-6
               [grid-auto-flow:column]
-              [grid-auto-columns:100%]
-              lg:[grid-auto-columns:calc((100%-48px)/3)]
+              [grid-auto-columns:88%]         
+              lg:[grid-auto-columns:calc((100%-48px)/3)]  
             "
           >
-            {blogs.map((blog) => (
+
+            {blogs.map((blog, i) => (
               <Link
                 href={blog.blogLink}
                 key={blog.blogTitle}
-                className="block scroll-ml-4 [scroll-snap-align:start]"
+                className={`block snap-center lg:snap-start ${i === blogs.length - 1 ? "flex " : ""}`}
               >
                 <article className="h-full">
                   <div className="h-[18.94rem] rounded-[1.25rem] overflow-hidden relative mb-[2rem]">
@@ -133,7 +134,10 @@ export default function Blogs() {
                     {blog.author}
                   </p>
                 </article>
+
+               {i === blogs.length - 1 && <div className="md:w-0 w-[4rem]"></div>}
               </Link>
+
             ))}
           </div>
         </div>
@@ -143,9 +147,8 @@ export default function Blogs() {
           {Array.from({ length: totalPages }).map((_, i) => (
             <button
               key={i}
-              className={`w-[1rem] h-[1rem] rounded-[0.25rem] transition-colors duration-300 ${
-                i === page ? "bg-accent" : "bg-[#D2D2D2]"
-              }`}
+              className={`w-[1rem] h-[1rem] rounded-[0.25rem] transition-colors duration-300 ${i === page ? "bg-accent" : "bg-[#D2D2D2]"
+                }`}
               aria-label={`Go to page ${i + 1}`}
             />
           ))}
