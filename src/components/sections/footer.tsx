@@ -1,11 +1,23 @@
 "use client"
 
-import { useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { generalSans } from '@/app/page'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useInView } from "motion/react";
 import ScribbleAnimated from '../illustrations/scribble';
+
+function useIsMobile(breakpoint = 768) {
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        const mql = window.matchMedia(`(max-width:${breakpoint - 1}px)`);
+        const set = () => setIsMobile(mql.matches);
+        set();
+        mql.addEventListener?.("change", set);
+        return () => mql.removeEventListener?.("change", set);
+    }, [breakpoint]);
+    return isMobile;
+}
 
 
 function Moniepoint({ className }: { className?: string }) {
@@ -31,6 +43,7 @@ function Moniepoint({ className }: { className?: string }) {
 }
 
 function Footer() {
+    const isMobile = useIsMobile();
     const uncleneboRef = useRef(null);
     const devdannyRef = useRef(null);
 
@@ -75,7 +88,8 @@ function Footer() {
                                 key={uncleneboInView ? "unclenebo-on" : "unclenebo-off"}
                                 color="#BBFF70"
                                 className="w-full h-full"
-                                animate={uncleneboInView}
+                                forceFilled={isMobile}
+                                animate={!isMobile && uncleneboInView}
                                 duration={1.5}
                             />
                         </div>
@@ -90,7 +104,8 @@ function Footer() {
                                 key={devdannyInView ? "devdanny-on" : "devdanny-off"}
                                 color="#FA1E1A"
                                 className="w-full h-full"
-                                animate={devdannyInView}
+                                forceFilled={isMobile}
+                                animate={!isMobile && devdannyInView}
                                 duration={1.5}
                                 delay={0.4}
                             />
