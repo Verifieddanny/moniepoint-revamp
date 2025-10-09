@@ -191,8 +191,8 @@ export default function Features() {
                     <div className={`md:w-[35%] w-full ${generalSans.className}`}>
                         <p className="text-white tracking-tight md:text-base text-xs md:mt-0 md:mb-[2.5rem] mt-[1.75rem] mb-[2.25rem]">
                             Access working capital loans to help your business
-                            <br /> grow. Easy request process with business friendly
-                            <br /> interest rates and repayment tenures.
+                            <br className="md:block hidden" /> grow. Easy request process with business friendly
+                            <br className="md:block hidden" /> interest rates and repayment tenures.
                         </p>
 
                         <Link href="https://moniepoint.sng.link/Dcbc3/df2f?_smtype=3">
