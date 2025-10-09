@@ -56,7 +56,7 @@ function Testimonial() {
           onClick={prev}
         />
 
-        <div className="relative w-[70%] md:h-[48.75rem] h-[24.6rem]">
+        <div className="relative w-[70%] md:h-[48.75rem] h-[26.6rem]">
           <AnimatePresence initial={false} custom={direction} mode="popLayout">
             <motion.div
               key={index}
@@ -99,7 +99,7 @@ function Testimonial() {
 
               {/* corner quotes */}
               <TestimonialQuote className="absolute md:-top-[18%] md:-left-[5%] -top-[13%] -left-[2%]" />
-              <TestimonialQuote className="absolute md:bottom-[25%] md:-right-[5%] bottom-[40%] -right-[2%] rotate-180" />
+              <TestimonialQuote className="absolute md:bottom-[25%] md:-right-[5%] bottom-[45%] -right-[2%] rotate-180" />
 
               {/* text */}
               <div className="w-full md:h-[17.5rem] h-[7.34rem] flex md:flex-row flex-col justify-between md:pt-[4rem] pt-2">
