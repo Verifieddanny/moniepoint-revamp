@@ -56,7 +56,7 @@ function Testimonial() {
           onClick={prev}
         />
 
-        <div className="relative w-[70%] md:h-[48.75rem] h-[26.6rem]">
+        <div className="relative md:w-[70%] w-[80%] md:h-[48.75rem] h-[24.6rem]">
           <AnimatePresence initial={false} custom={direction} mode="popLayout">
             <motion.div
               key={index}
@@ -87,7 +87,7 @@ function Testimonial() {
                 }
               }}
             >
-              <div className="w-full md:h-[29.25rem] h-[11.26rem] rounded-[1rem] bg-white relative overflow-hidden">
+              <div className="w-full md:h-[29.25rem] h-[9.26rem] rounded-[1rem] bg-white relative overflow-hidden">
                 <VideoCard
                   videoId={current.videoId}
                   poster={current.poster}
@@ -99,10 +99,10 @@ function Testimonial() {
 
               {/* corner quotes */}
               <TestimonialQuote className="absolute md:-top-[18%] md:-left-[5%] -top-[13%] -left-[2%]" />
-              <TestimonialQuote className="absolute md:bottom-[25%] md:-right-[5%] bottom-[45%] -right-[2%] rotate-180" />
+              <TestimonialQuote className="absolute md:bottom-[25%] md:-right-[5%] bottom-[43%] -right-[2%] rotate-180" />
 
               {/* text */}
-              <div className="w-full md:h-[17.5rem] h-[7.34rem] flex md:flex-row flex-col justify-between md:pt-[4rem] pt-2">
+              <div className="w-full md:h-[17.5rem] h-[9.34rem] flex md:flex-row flex-col justify-between md:pt-[4rem] pt-2">
                 <div className="md:w-[55%] w-full">
                   <p className="text-primary font-bold md:text-7xl text-4xl tracking-[-0.2rem]">
                     {current.name}
@@ -127,7 +127,7 @@ function Testimonial() {
         />
       </div>
 
-            <div className="w-full flex items-center justify-center gap-x-[1rem] md:mt-[1.5rem] mt-[5rem]">
+            <div className="w-full flex items-center justify-center gap-x-[1rem] md:mt-[1.5rem] mt-[3rem]">
                 {testimonials.map((_, i) => (
                     <button
                         key={i}
