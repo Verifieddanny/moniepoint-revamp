@@ -14,6 +14,7 @@ function WhatsMoreCard({
   imgWrapperClass = "",
   delayOffset = 0,
   trigger = false, // parent in view
+  cardRef
 }: {
   bg: string;
   title: React.ReactNode;
@@ -22,9 +23,11 @@ function WhatsMoreCard({
   imgWrapperClass?: string;
   delayOffset?: number;
   trigger?: boolean;
+  cardRef?: React.Ref<HTMLDivElement>;
 }) {
   return (
     <motion.div
+      ref={cardRef}
       className="w-[18.92rem] h-[18.94rem] rounded-[1rem] relative overflow-hidden py-[1rem] px-[1.5rem]"
       style={{ backgroundColor: bg }}
       initial={{ scale: 0.92, opacity: 0 }}
@@ -69,13 +72,19 @@ function WhatsMoreCard({
 }
 
 export default function WhatsMore() {
-  const sectionRef = useRef<HTMLElement | null>(null);
-  const inView = useInView(sectionRef, { once: true, amount: 0.65 });
+  const firstCard = useRef<HTMLDivElement | null>(null);
+  const secondCard = useRef<HTMLDivElement | null>(null);
+  const thirdCard = useRef<HTMLDivElement | null>(null);
+
+  const inView = useInView(firstCard, { once: true, amount: 0.35 });
+  const inTwoView = useInView(secondCard, { once: true, amount: 0.35 });
+  const inThreeView = useInView(thirdCard, { once: true, amount: 0.35 });
+
 
   const STEP = 0.25; // stagger gap between cards
 
   return (
-    <section ref={sectionRef} className="w-screen relative flex flex-col items-center md:py-[6rem] py-[3rem]">
+    <section className="w-screen relative flex flex-col items-center md:py-[6rem] py-[3rem]">
       <p className="text-primary font-bold md:text-7xl text-4xl text-center md:tracking-[-0.25rem] tracking-tight md:mb-[2.5rem] mb-[1rem]">
         What&apos;s more?
       </p>
@@ -86,6 +95,7 @@ export default function WhatsMore() {
 
       <div className="w-full flex md:flex-row flex-col justify-center items-center md:gap-x-[2rem] md:gap-y-0 gap-y-[1rem]">
         <WhatsMoreCard
+          cardRef={firstCard}
           bg="#FFEA84"
           title={<span className="text-[#0357EE]">Manage Multiple<br />Businesses</span>}
           desc={<>Explore more ways to take your<br />business to the next level.</>}
@@ -96,23 +106,25 @@ export default function WhatsMore() {
         />
 
         <WhatsMoreCard
+          cardRef={secondCard}
           bg="#CEF2FE"
           title={<span className="text-[#0357EE]">Business<br />Performance</span>}
           desc={<>Keep your finger on the<br />pulse of your business</>}
           imgSrc="/images/business-performance.webp"
           imgWrapperClass="w-[15.5rem] h-[17.3rem] -bottom-[35%] -right-[18%]"
           delayOffset={1 * STEP}
-          trigger={inView}
+          trigger={inTwoView}
         />
 
         <WhatsMoreCard
+          cardRef={thirdCard}
           bg="#59D9FE"
           title={<span className="text-primary">Easy Help</span>}
           desc={<>Quick and accessible support<br />whenever you need it</>}
           imgSrc="/images/easy-help.webp"
           imgWrapperClass="w-[8.27rem] h-[12.6rem] bottom-0 right-0"
           delayOffset={2 * STEP}
-          trigger={inView}
+          trigger={inThreeView}
         />
       </div>
     </section>
