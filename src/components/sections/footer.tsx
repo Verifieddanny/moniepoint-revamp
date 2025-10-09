@@ -65,7 +65,7 @@ function Footer() {
 
 
                 <div className={`${generalSans.className} md:text-2xl text-[1.125rem] text-white text-center md:mt-0 mt-[0.5rem] md:leading-[1.5rem] leading-[2rem]`}>© 2025
-                    <Link href="https://x.com/Agbanebbie" className='hover:text-[#BBFF70] hover:font-semibold italic hover:not-italic md:hover:text-[1.75rem] hover:text-[1.5rem] duration-300 transition-all ease-in-out relative'>
+                    <Link href="https://x.com/uncle_nebo" className='hover:text-[#BBFF70] hover:font-semibold italic hover:not-italic md:hover:text-[1.75rem] hover:text-[1.5rem] duration-300 transition-all ease-in-out relative'>
                         {"   "}Unclenebo
                         <div
                             ref={uncleneboRef}
