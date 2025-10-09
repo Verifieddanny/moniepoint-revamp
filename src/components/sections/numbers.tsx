@@ -51,7 +51,7 @@ export default function Numbers() {
                     Businesses that Count On Us
                 </p>
                 <motion.p
-                    className="font-semibold text-white text-5xl md:text-[15rem] text-center tracking-[-0.02rem] md:tracking-[-0.5rem] md:mb-[5rem] mb-[2.5rem]"
+                    className="font-semibold text-white text-[4.2rem] md:text-[15rem] text-center tracking-[-0.02rem] md:tracking-[-0.5rem] md:mb-[5rem] mb-[2.5rem]"
                 >
                     {rounded}
                 </motion.p>

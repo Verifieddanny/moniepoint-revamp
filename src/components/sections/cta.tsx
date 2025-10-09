@@ -36,14 +36,14 @@ function Cta() {
 
             {/* content on top */}
             <div className="relative z-10 flex flex-col items-center">
-                <p className='text-center font-bold md:text-7xl text-xl text-white mb-[5rem]'>Enjoy a business solution<br /> designed to help you grow.</p>
+                <p className='text-center font-bold md:text-7xl text-xl text-white mt-[2.5rem] mb-[2rem]'>Enjoy a business solution<br /> designed to help you grow.</p>
 
                 <Link href="https://moniepoint.sng.link/Dcbc3/df2f?_smtype=3" className='md:flex items-center gap-x-1.5 px-4 py-6 rounded-[1rem] bg-[#FFDA46] hidden mb-[3rem]'>
                     <p className={`font-medium ${generalSans.className}`}>Open an Account</p>
                     <Next />
                 </Link>
 
-                <div className='w-full relative flex justify-center gap-x-[2rem] items-center'>
+                <div className='w-full relative flex justify-center gap-x-[2rem] items-center mb-[2.5rem]'>
 
 
                     <Link rel="noopener" target="_blank" href="https://apps.apple.com/us/app/moniepoint-personal-banking/id6452756675" className="ios-link v-popper--has-tooltip bg-black p-4 rounded-[0.7rem]">

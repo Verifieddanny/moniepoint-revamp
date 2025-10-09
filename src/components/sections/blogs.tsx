@@ -59,7 +59,7 @@ export default function Blogs() {
         Blogs & Articles
       </p>
       <p
-        className={`${generalSans.className} text-grays font-medium text-center md:mb-[5rem] mb-[2.5rem]`}
+        className={`${generalSans.className} text-grays font-medium text-center md:mb-[5rem] mb-[2.5rem] md:text-base text-sm`}
       >
         Discover the roadmap to financial success! Stay
         <br className="md:hidden block" /> updated
