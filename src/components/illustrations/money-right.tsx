@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 function MoneyRight() {
   return (
-    <motion.div className="absolute md:-right-[1%] right-[7%] min-[1300px]:-right-[12%]  top-[37%] md:top-[50%] z-10 min-[1300px]:w-[18rem] min-[1300px]:h-[18rem] w-[5.82rem] h-[5.05rem] md:w-[14rem] md:h-[14rem] overflow-hidden" animate={{ y: [0, -20, 0] }}
+    <motion.div className="absolute md:-right-[1%] right-[4%] min-[1300px]:-right-[12%]  top-[37%] md:top-[50%] z-10 min-[1300px]:w-[18rem] min-[1300px]:h-[18rem] w-[5.82rem] h-[5.05rem] md:w-[14rem] md:h-[14rem] overflow-hidden" animate={{ y: [0, -20, 0] }}
       transition={{
         duration: 2,
         repeat: Infinity,
