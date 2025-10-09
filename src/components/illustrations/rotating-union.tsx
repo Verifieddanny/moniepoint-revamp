@@ -31,4 +31,13 @@ function RotatingFour({ className }: { className?: string }) {
     )
 }
 
-export {RotatingOne, RotatingTwo, RotatingThree, RotatingFour};
+function RotatingFive({ className }: { className?: string }) {
+    return (
+        <svg width="160" height="159" viewBox="0 0 1376 1364" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+            <path d="M575.563 30.3899C879.624 -22.433 1094.32 4.68219 1143.47 36.1932C1195.07 68.0657 1290.16 263.884 1343.54 566.582C1396.91 869.281 1374.54 1085.9 1336.94 1133.41C1301.66 1180.6 1109.11 1279.53 805.266 1333.1L800.577 1333.93C496.602 1386.74 281.822 1359.64 232.666 1328.13C181.002 1296.35 85.8934 1100.45 32.5195 797.75C-20.8542 495.052 1.51527 278.434 39.1964 230.907C74.6108 184.484 267.936 85.4241 570.874 31.2166L575.563 30.3899Z" fill="#0F4099" />
+        </svg>
+
+    )
+}
+
+export { RotatingOne, RotatingTwo, RotatingThree, RotatingFour, RotatingFive };

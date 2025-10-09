@@ -51,7 +51,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${onest.className} antialiased`}>
         {children}
-        <div className="w-full h-screen"></div>
       </body>
     </html>
   );

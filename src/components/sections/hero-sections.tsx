@@ -37,7 +37,7 @@ function Hero() {
                 </p>
 
 
-                <Link href="">
+                <Link href="https://moniepoint.sng.link/Dcbc3/df2f?_smtype=3">
                     <div className="bg-button md:rounded-[0.5rem] rounded-full py-[0.75rem] px-[1rem] flex items-center gap-x-2 hover:bg-accent transition-colors ease-in-out duration-300">
                         <div className="md:w-[2rem] md:h-[2rem] w-[1rem] h-[1rem] md:block hidden">
                             <LinkUp className="w-full h-full" />
