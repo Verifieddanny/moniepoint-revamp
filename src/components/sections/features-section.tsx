@@ -142,9 +142,9 @@ export default function Features() {
                     <div className={`md:w-[35%] w-full ${generalSans.className}`}>
                         <p className="text-white tracking-tight md:text-base text-xs md:mt-0 md:mb-[2.5rem] mt-[1.75rem] mb-[1.4rem]">
                             Order an expense card to spend and manage your
-                            <br /> business finance effectively, and get it in 48hrs.
-                            <br /> Track your business expenses and set limits for
-                            <br /> different needs.
+                            <br className="md:block hidden" /> business finance effectively, and get it in 48hrs.
+                            <br className="md:block hidden" /> Track your business expenses and set limits for
+                            <br className="md:block hidden" /> different needs.
                         </p>
 
                         <Link href="https://moniepoint.sng.link/Dcbc3/df2f?_smtype=3">
