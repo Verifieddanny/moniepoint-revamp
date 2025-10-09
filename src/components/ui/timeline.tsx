@@ -147,7 +147,7 @@ function TimelineStep({ step, index, progressY }: { step: Step; index: number; p
     );
 
     return (
-        <div ref={ref} className="relative grid grid-cols-[100px_1fr] md:grid-cols-[120px_1fr] gap-4 md:gap-10">
+        <div ref={ref} className="relative grid grid-cols-[80px_1fr] md:grid-cols-[120px_1fr] gap-2 md:gap-10">
             <div className="relative">
                 <motion.div
                     className="absolute left-1/2 -translate-x-1/2 w-7 h-7 md:w-[3.2rem] md:h-[3.2rem] md:mt-[1rem] mt-[3.5rem] rounded-full border-[3px] md:border-[4px]"
@@ -176,7 +176,7 @@ function TimelineStep({ step, index, progressY }: { step: Step; index: number; p
                     </div>
                     <div>
                         <p className="text-[#454545] font-bold md:text-xl text-base tracking-tight">{step.title}</p>
-                        <p className="text-[#696969] mt-2 md:text-sm text-xs font-sans">{step.body}</p>
+                        <p className="text-[#696969] mt-2 md:text-[10px] text-xs font-sans">{step.body}</p>
                     </div>
                 </div>
             </motion.div>
@@ -213,9 +213,9 @@ export default function Timeline() {
                     aria-hidden="true"
                 >
                     <div className="absolute md:top-0 top-[3rem] bottom-0" aria-hidden="true">
-                        <div className="absolute left-1/2 md:translate-x-[0.4rem] translate-x-[0.4rem] w-[4px] md:h-[85%] h-[87%] bg-[#E5E7EB] rounded-full" />
+                        <div className="absolute left-1/2 md:translate-x-[0.4rem] -translate-x-[0.2rem] w-[4px] md:h-[85%] h-[87%] bg-[#E5E7EB] rounded-full" />
                         <motion.div
-                            className="absolute left-1/2 md:translate-x-[0.4rem] translate-x-[0.4rem] w-[4px] md:h-[85%] h-[87%] bg-[#00C74E] rounded-full origin-top"
+                            className="absolute left-1/2 md:translate-x-[0.4rem] -translate-x-[0.2rem] w-[4px] md:h-[85%] h-[87%] bg-[#00C74E] rounded-full origin-top"
                             style={{ scaleY }}
                         />
                     </div>

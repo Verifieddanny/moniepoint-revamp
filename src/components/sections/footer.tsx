@@ -1,23 +1,13 @@
 "use client"
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import { generalSans } from '@/app/page'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useInView } from "motion/react";
 import ScribbleAnimated from '../illustrations/scribble';
+import { useIsMobile } from '../../../lib/utils';
 
-function useIsMobile(breakpoint = 768) {
-    const [isMobile, setIsMobile] = useState(false);
-    useEffect(() => {
-        const mql = window.matchMedia(`(max-width:${breakpoint - 1}px)`);
-        const set = () => setIsMobile(mql.matches);
-        set();
-        mql.addEventListener?.("change", set);
-        return () => mql.removeEventListener?.("change", set);
-    }, [breakpoint]);
-    return isMobile;
-}
 
 
 function Moniepoint({ className }: { className?: string }) {
