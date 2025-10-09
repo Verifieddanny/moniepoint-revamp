@@ -1,12 +1,11 @@
 "use client"
 
-import React, { useCallback, useState } from 'react'
+import React, { useState } from 'react'
 import Scribble from '../illustrations/scribble'
-import Image from 'next/image'
 import TestimonialQuote from '../illustrations/testimonial-quote'
 import Navigation from '../illustrations/navigation'
 import { generalSans } from '@/app/page'
-import VideoCard from './video-card'
+import VideoCard from '../ui/video-card'
 import { testimonials } from '../../../lib/testimonial'
 import { motion, AnimatePresence } from "motion/react";
 
@@ -35,7 +34,7 @@ function Testimonial() {
     exit:  (dir: 1 | -1) => ({ x: -dir * SLIDE_X, opacity: 0 }),
   };
     return (
-        <main className="w-screen min-h-screen md:py-[5rem] py-[2.5rem] flex flex-col items-center max-w-[1300px] mx-auto md:mt-[4rem] mt-[9rem] md:mb-[5rem] mb-[2.5rem]">
+        <main className="w-screen min-h-screen md:py-[5rem] py-[2.5rem] flex flex-col items-center max-w-[1300px] mx-auto md:mt-[4rem] mt-[9rem]">
 
             <div className='w-fit relative mb-[4rem]'>
                 <p className='text-primary font-bold md:text-7xl text-4xl text-center md:tracking-[-0.25rem] tracking-tight'>Don&apos;t just take our<br /> word for it.</p>

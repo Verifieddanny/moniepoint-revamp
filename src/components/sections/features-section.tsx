@@ -54,7 +54,7 @@ export default function Features() {
                             <br /> instant payments every time.
                         </p>
 
-                        <Link href="">
+                        <Link href="https://moniepoint.sng.link/Dcbc3/df2f?_smtype=3">
                             <div className="bg-primary rounded-[0.5rem] py-[0.75rem] px-[1rem] flex items-center gap-x-2 hover:bg-button transition-colors ease-in-out duration-300 md:w-fit justify-center">
                                 <p className="text-white font-medium text-base text-center">
                                     Open an Account
@@ -136,7 +136,7 @@ export default function Features() {
                             <br /> different needs.
                         </p>
 
-                        <Link href="">
+                        <Link href="https://moniepoint.sng.link/Dcbc3/df2f?_smtype=3">
                             <div className="bg-primary rounded-[0.5rem] py-[0.75rem] px-[1rem] flex items-center gap-x-2 hover:bg-button transition-colors ease-in-out duration-300 md:w-fit justify-center">
                                 <p className="text-white font-medium text-base text-center">
                                     Get a Card
@@ -183,7 +183,7 @@ export default function Features() {
                             <br /> interest rates and repayment tenures.
                         </p>
 
-                        <Link href="">
+                        <Link href="https://moniepoint.sng.link/Dcbc3/df2f?_smtype=3">
                             <div className="bg-primary rounded-[0.5rem] py-[0.75rem] px-[1rem] flex items-center gap-x-2 hover:bg-button transition-colors ease-in-out duration-300 md:w-fit justify-center">
                                 <p className="text-white font-medium text-base text-center">
                                     Open an Account

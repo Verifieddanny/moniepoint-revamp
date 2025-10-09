@@ -9,7 +9,7 @@ function FreeBank() {
     const ref = useRef<HTMLElement | null>(null);
     const isInView = useInView(ref, { once: true, amount: 0.4 })
     return (
-        <motion.main ref={ref} className='w-screen relative md:-top-[7dvh] top-[4dvh] flex flex-col items-center md:py-[5rem] py-[2.5rem]' initial={{ opacity: 0, y: 40 }}
+        <motion.main ref={ref} className='w-full relative md:-top-[7dvh] top-[4dvh] flex flex-col items-center md:py-[5rem] py-[2.5rem]' initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.8, ease: "easeOut" }}>
             <motion.div initial={{ opacity: 0, scale: 0.9 }}

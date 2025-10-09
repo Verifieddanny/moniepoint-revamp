@@ -6,6 +6,12 @@ import Hero from "@/components/sections/hero-sections";
 import CoinMoney from "@/components/sections/coin-money-section";
 import Testimonial from "@/components/sections/testimonial";
 import Numbers from "@/components/sections/numbers";
+import WhatsMore from "@/components/sections/whats-more";
+import GettingStarted from "@/components/sections/getting-started";
+import DownloadApp from "@/components/sections/download-app";
+import Blogs from "@/components/sections/blogs";
+import Cta from "@/components/sections/cta";
+import Footer from "@/components/sections/footer";
 
 export const generalSans = localFont({
   src: "../../public/fonts/GeneralSans_Complete/Fonts/WEB/fonts/GeneralSans-Variable.woff2",
@@ -23,6 +29,12 @@ export default function Home() {
     <CoinMoney />
     <Testimonial />
     <Numbers />
+    <WhatsMore />
+    <GettingStarted />
+    <DownloadApp />
+    <Blogs />
+    <Cta />
+    <Footer />
     </main>
   );
 }
