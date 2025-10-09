@@ -20,11 +20,11 @@ function FreeBank() {
 
             <motion.p initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.7, delay: 0.4 }} className='text-primary font-bold md:text-5xl text-3xl text-center my-[2rem] md:tracking-[-0.1rem] tracking-tight'>A free bank account to<br /> power your business</motion.p>
+                transition={{ duration: 0.7, delay: 0.4 }} className='text-primary font-bold md:text-5xl text-3xl text-center my-[2.11rem] md:tracking-[-0.1rem] tracking-tight'>A free bank account to<br /> power your business</motion.p>
 
             <motion.p initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.7, delay: 0.6 }} className={`text-grays text-center tracking-tight md:text-base text-sm font-medium ${generalSans.className}`}>Open a free bank account in your business<br className="block md:hidden" /> name, in minutes.<br className="hidden md:block" /> Access round the clock<br className="block md:hidden" /> support, with no hidden fees and<br className="hidden md:block" /> complete<br className="block md:hidden" /> control over your account.</motion.p>
+                transition={{ duration: 0.7, delay: 0.6 }} className={`text-grays text-center tracking-tight md:text-base text-xs font-medium ${generalSans.className}`}>Open a free bank account in your business<br className="block md:hidden" /> name, in minutes.<br className="hidden md:block" /> Access round the clock<br className="block md:hidden" /> support, with no hidden fees and<br className="hidden md:block" /> complete<br className="block md:hidden" /> control over your account.</motion.p>
         </motion.main>
     )
 }

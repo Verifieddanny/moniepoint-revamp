@@ -23,14 +23,14 @@ function Hero() {
 
                 <section className="w-full max-w-[90%] md:max-w-[1300px] mx-auto flex flex-col items-center text-center relative">
                     {/* Logo */}
-                    <div className="w-36 h-8 mb-8 md:w-48 md:h-10">
+                    <div className="w-36 h-8 mb-[3.86rem] md:w-48 md:h-10">
                         <Logo className="w-full h-full" />
                     </div>
 
                     {/* Headline */}
                     <p 
                         data-cursor-hover
-                        className="text-white font-bold md:tracking-[-0.5rem] tracking-tight leading-[106%] text-4xl md:text-6xl lg:text-[8.3125rem] md:mb-10 mb-[3.5rem] transition-all duration-300 ease-in-out"
+                        className="text-white font-bold md:tracking-[-0.5rem] tracking-tight leading-[106%] text-4xl md:text-6xl lg:text-[8.3125rem] md:mb-10 mb-[4.31rem] transition-all duration-300 ease-in-out"
                     >
                         Simple solutions
                         <br /> to power your
@@ -38,14 +38,14 @@ function Hero() {
                     </p>
 
                 {/* Subtitle */}
-                <p className={`text-white font-medium text-xs md:text-base mb-12 tracking-tight ${generalSans.className}`}>
+                <p className={`text-white font-medium text-sm md:text-base md:mb-12 mb-[3.2rem] tracking-tight ${generalSans.className}`}>
                     Collect payments, access loans and manage <br className="block md:hidden" /> operations with a <br className="hidden md:block" />
                     business banking solution<br className="block md:hidden" /> that meets all your needs.
                 </p>
 
 
                 <Link href="https://moniepoint.sng.link/Dcbc3/df2f?_smtype=3" data-cursor-hover>
-                    <div className="bg-button md:rounded-[0.5rem] rounded-full py-[0.75rem] px-[1rem] flex items-center gap-x-2 hover:bg-accent transition-colors ease-in-out duration-300">
+                    <div className="bg-button md:rounded-[0.5rem] rounded-full md:py-[0.75rem] md:px-[1rem] p-[1.5rem] flex items-center gap-x-2 hover:bg-accent transition-colors ease-in-out duration-300">
                         <div className="md:w-[2rem] md:h-[2rem] w-[1rem] h-[1rem] md:block hidden">
                             <LinkUp className="w-full h-full" />
                         </div>
