@@ -104,7 +104,7 @@ function Testimonial() {
               {/* text */}
               <div className="w-full md:h-[17.5rem] h-[9.34rem] flex md:flex-row flex-col justify-between md:pt-[4rem] pt-2">
                 <div className="md:w-[55%] w-full">
-                  <p className="text-primary font-bold md:text-7xl text-4xl tracking-[-0.2rem]">
+                  <p className="text-primary font-bold md:text-7xl text-2xl md:tracking-[-0.2rem] tracking-tight">
                     {current.name}
                   </p>
                   <p className="text-primary font-medium md:text-xl md:mt-[2rem] mt-[0.5rem] text-[1.125rem] tracking-[-0.02rem]">
