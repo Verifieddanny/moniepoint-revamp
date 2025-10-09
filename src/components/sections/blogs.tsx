@@ -70,12 +70,12 @@ export default function Blogs() {
         {/* Controls */}
         <div className="flex items-center justify-between mb-6 px-4">
           <Navigation
-            className="w-[2rem] h-[3rem] cursor-pointer"
+            className="w-[2rem] h-[3rem] cursor-pointer md:block hidden"
             onClick={() => scrollByCards(-1)}
           />
           <div className="flex items-center gap-3">
             <Navigation
-              className="w-[2rem] h-[3rem] cursor-pointer rotate-180"
+              className="w-[2rem] h-[3rem] cursor-pointer rotate-180 md:block hidden"
               onClick={() => scrollByCards(1)}
             />
             <Link
@@ -143,7 +143,7 @@ export default function Blogs() {
         </div>
 
         {/* Dots */}
-        <div className="w-full flex items-center justify-center gap-x-[1rem] md:mt-[2.5rem] mt-[1.5rem] md:hidden">
+        {/* <div className="w-full flex items-center justify-center gap-x-[1rem] md:mt-[2.5rem] mt-[1.5rem] md:hidden">
           {Array.from({ length: totalPages }).map((_, i) => (
             <button
               key={i}
@@ -152,7 +152,7 @@ export default function Blogs() {
               aria-label={`Go to page ${i + 1}`}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
