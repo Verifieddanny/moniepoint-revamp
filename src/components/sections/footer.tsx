@@ -65,32 +65,37 @@ function Footer() {
 
 
                 <div className={`${generalSans.className} md:text-2xl text-[1.125rem] text-white text-center md:mt-0 mt-[0.5rem] md:leading-[1.5rem] leading-[2rem]`}>© 2025
-                    <Link href="https://x.com/Agbanebbie" className='hover:text-[#BBFF70] hover:font-semibold italic hover:not-italic md:hover:text-[1.75rem] hover:text-[1.5rem] duration-300 transition-all ease-in-out relative'>
+                    <Link href="https://x.com/uncle_nebo" className='hover:text-[#BBFF70] hover:font-semibold italic hover:not-italic md:hover:text-[1.75rem] hover:text-[1.5rem] duration-300 transition-all ease-in-out relative'>
                         {"   "}Unclenebo
                         <div
                             ref={uncleneboRef}
                             className="absolute left-0 md:-bottom-[1.2rem] -bottom-[0.6rem] md:w-[5rem] w-[4rem] md:h-[2rem] h-[1rem]"
                         >
                             <ScribbleAnimated
+                                key={uncleneboInView ? "unclenebo-on" : "unclenebo-off"}
                                 color="#BBFF70"
-                                className='w-full h-full'
+                                className="w-full h-full"
                                 animate={uncleneboInView}
                                 duration={1.5}
                             />
                         </div>
+
+
                     </Link> x <Link href="https://x.com/dannyclassi_c" className='hover:text-[#FA1E1A] hover:font-semibold italic hover:not-italic md:hover:text-[1.75rem] hover:text-[1.5rem] duration-300 transition-all ease-in-out relative'>DevDanny
                         <div
                             ref={devdannyRef}
                             className="absolute left-0 md:-bottom-[1.2rem] -bottom-[0.6rem] md:w-[5rem] w-[4rem] md:h-[2rem] h-[1rem]"
                         >
                             <ScribbleAnimated
+                                key={devdannyInView ? "devdanny-on" : "devdanny-off"}
                                 color="#FA1E1A"
-                                className='w-full h-full'
+                                className="w-full h-full"
                                 animate={devdannyInView}
                                 duration={1.5}
                                 delay={0.4}
                             />
                         </div>
+
                     </Link>. All rights reserved.</div>
 
 
