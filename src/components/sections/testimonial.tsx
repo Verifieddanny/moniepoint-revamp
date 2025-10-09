@@ -56,7 +56,7 @@ function Testimonial() {
           onClick={prev}
         />
 
-        <div className="relative md:w-[70%] w-[93%] md:h-[48.75rem] h-[24.6rem]">
+        <div className="relative w-[70%] md:h-[48.75rem] h-[24.6rem]">
           <AnimatePresence initial={false} custom={direction} mode="popLayout">
             <motion.div
               key={index}
@@ -127,7 +127,7 @@ function Testimonial() {
         />
       </div>
 
-            <div className="w-full flex items-center justify-center gap-x-[1rem] md:mt-[1.5rem] mt-[1.25rem]">
+            <div className="w-full flex items-center justify-center gap-x-[1rem] md:mt-[1.5rem] mt-[5rem]">
                 {testimonials.map((_, i) => (
                     <button
                         key={i}
