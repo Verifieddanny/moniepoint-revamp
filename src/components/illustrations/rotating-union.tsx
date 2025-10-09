@@ -40,4 +40,31 @@ function RotatingFive({ className }: { className?: string }) {
     )
 }
 
-export { RotatingOne, RotatingTwo, RotatingThree, RotatingFour, RotatingFive };
+function RotatatingSix({ className }: { className?: string }) {
+    return (
+        <svg width="267" height="266" viewBox="0 0 2304 2295" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+            <path d="M658.815 286.398C1060.3 55.9503 1376.83 -15.9746 1462.29 3.22241C1551.36 21.679 1785.86 248.907 2016.39 648.189C2246.91 1047.47 2326.51 1364.28 2297.89 1450.54C2272.38 1535.16 2051.71 1773.38 1650.92 2004.78L1644.74 2008.35C1243.36 2238.73 926.719 2310.72 841.265 2291.52C752.143 2273.24 517.579 2045.9 287.053 1646.62C56.5272 1247.34 -23.0738 930.53 5.65666 844.208C31.7582 760.604 253.437 521.793 652.63 289.969L658.815 286.398Z" fill="#0A47C3" />
+        </svg>
+
+    )
+}
+
+function RotatingSeven({ className }: { className?: string }) {
+    return (
+        <svg width="365" height="366" viewBox="0 0 3150 3154" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+            <path d="M564.821 723.077C962.761 251.255 1326.55 16.7919 1442.37 1.87467C1562.39 -15.621 1959.83 162.14 2430.74 557.284C2901.66 952.429 3145.86 1313.07 3149.34 1434.19C3155.96 1551.85 2988.12 1950.96 2591.48 2423.65L2585.36 2430.94C2187.53 2902.63 1823.63 3137.23 1707.81 3152.14C1587.81 3169.88 1190.24 2992.01 719.329 2596.86C248.415 2201.72 4.20786 1841.08 0.839847 1719.83C-4.58258 1603.17 164.26 1202.87 558.7 730.372L564.821 723.077Z" fill="#0357EE" />
+        </svg>
+
+    )
+}
+
+function RotatingEight({ className }: { className?: string }) {
+    return (
+        <svg width="421" height="423" viewBox="0 0 3627 3652" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+            <path d="M261.211 1255C526.922 530.665 853.996 99.7318 983.666 32.6928C1117.16 -39.1696 1659.99 -0.281421 2382.07 262.533C3104.15 525.349 3545.18 844.556 3601.05 985.342C3659.12 1120.71 3632.6 1661.27 3368.79 2386.07L3364.72 2397.26C3099.09 3121.39 2771.94 3552.53 2642.27 3619.57C2508.9 3691.71 1965.87 3652.74 1243.79 3389.93C521.713 3127.11 80.6824 2807.91 24.886 2666.92C-31.355 2532.22 -4.16959 1989.83 257.14 1266.19L261.211 1255Z" fill="#0A70FF" />
+        </svg>
+
+    )
+}
+
+export { RotatingOne, RotatingTwo, RotatingThree, RotatingFour, RotatingFive, RotatatingSix, RotatingSeven, RotatingEight };

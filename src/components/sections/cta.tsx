@@ -1,5 +1,5 @@
 import React from 'react'
-import { RotatingFive, RotatingOne, RotatingThree, RotatingTwo } from '../illustrations/rotating-union'
+import { RotatatingSix, RotatingEight, RotatingFive, RotatingSeven } from '../illustrations/rotating-union'
 import { generalSans } from '@/app/page'
 import Link from 'next/link'
 import { AppleStoreIcon, PlayStoreIcon } from '../illustrations/download-icon'
@@ -21,13 +21,13 @@ function Cta() {
                 {/* anchor at center */}
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                     {/* sizes use vmin so they scale with the smaller viewport side */}
-                    <RotatingThree className="block w-[100vmin] md:w-[200vmin] h-auto animate-spin [animation-duration:70s] [animation-timing-function:linear]" />
+                    <RotatingEight className="block w-[100vmin] md:w-[200vmin] h-auto animate-spin [animation-duration:70s] [animation-timing-function:linear]" />
                 </div>
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <RotatingTwo className="block w-[87.5vmin] md:w-[175vmin] h-auto animate-spin [animation-duration:55s] [animation-timing-function:linear]" />
+                    <RotatingSeven className="block w-[87.5vmin] md:w-[175vmin] h-auto animate-spin [animation-duration:55s] [animation-timing-function:linear]" />
                 </div>
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <RotatingOne className="block w-[67.5vmin]  md:w-[135vmin]  h-auto animate-spin [animation-duration:45s] [animation-timing-function:linear]" />
+                    <RotatatingSix className="block w-[67.5vmin]  md:w-[135vmin]  h-auto animate-spin [animation-duration:45s] [animation-timing-function:linear]" />
                 </div>
                 <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
                     <RotatingFive className="block w-[37.5vmin]  md:w-[75vmin]  h-auto animate-spin [animation-duration:35s] [animation-timing-function:linear]" />

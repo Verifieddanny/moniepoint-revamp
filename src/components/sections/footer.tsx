@@ -1,7 +1,12 @@
+"use client"
+
+import { useRef } from 'react';
 import { generalSans } from '@/app/page'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import { useInView } from "motion/react";
+import ScribbleAnimated from '../illustrations/scribble';
+
 
 function Moniepoint({ className }: { className?: string }) {
     return (
@@ -26,16 +31,30 @@ function Moniepoint({ className }: { className?: string }) {
 }
 
 function Footer() {
+    const uncleneboRef = useRef(null);
+    const devdannyRef = useRef(null);
+
+    const uncleneboInView = useInView(uncleneboRef, {
+        once: true,
+        amount: 0.1,
+        margin: "0px 0px -100px 0px"
+    });
+
+    const devdannyInView = useInView(devdannyRef, {
+        once: true,
+        amount: 0.1,
+        margin: "0px 0px -100px 0px"
+    });
     return (
         <footer className='w-full md:py-[6rem] py-[3rem] bg-primary'>
 
-            <main className='w-full max-w-[1300px] mx-auto flex md:flex-row flex-col justify-center md:gap-x-[25%] items-center'>
+            <main className='w-full max-w-[1300px] mx-auto flex md:flex-row flex-col justify-center md:gap-x-[15%] items-center'>
 
                 <div className='flex gap-x-3 items-center'>
 
-                    <div className={`${generalSans.className} font-semibold text-white flex items-center md:text-2xl text-xl gap-x-1`}>
-                        <p>Made w</p>
-                        <Image src="/images/heart.png" alt='heart' quality={90} priority width={32} height={32} className='md:w-[2rem] md:h-[2rem] w-[1rem] h-[1rem]' />
+                    <div className={`${generalSans.className} font-semibold text-white flex items-center md:text-4xl text-xl gap-x-1`}>
+                        <p className='w-full'>Made w</p>
+                        <Image src="/images/heart.png" alt='heart' quality={90} priority width={32} height={32} className='md:w-[4rem] md:h-[4rem] w-[2rem] h-[2rem]' />
                         <p>for</p>
                     </div>
                     <div className='relative'>
@@ -44,7 +63,38 @@ function Footer() {
                     </div>
                 </div>
 
-                <p className={`${generalSans.className} md:text-xl text-[1.125rem] text-white text-center md:mt-0 mt-[0.5rem]`}>© 2025 <Link href="https://x.com/Agbanebbie">Unclenebo</Link> x <Link href="https://x.com/dannyclassi_c">DevDanny</Link>. All rights reserved.</p>
+
+                <div className={`${generalSans.className} md:text-2xl text-[1.125rem] text-white text-center md:mt-0 mt-[0.5rem] md:leading-[1.5rem] leading-[2rem]`}>© 2025
+                    <Link href="https://x.com/Agbanebbie" className='hover:text-[#BBFF70] hover:font-semibold italic hover:not-italic md:hover:text-[1.75rem] hover:text-[1.5rem] duration-300 transition-all ease-in-out relative'>
+                        {"   "}Unclenebo
+                        <div
+                            ref={uncleneboRef}
+                            className="absolute left-0 md:-bottom-[1.2rem] -bottom-[0.6rem] md:w-[5rem] w-[4rem] md:h-[2rem] h-[1rem]"
+                        >
+                            <ScribbleAnimated
+                                color="#BBFF70"
+                                className='w-full h-full'
+                                animate={uncleneboInView}
+                                duration={1.5}
+                            />
+                        </div>
+                    </Link> x <Link href="https://x.com/dannyclassi_c" className='hover:text-[#FA1E1A] hover:font-semibold italic hover:not-italic md:hover:text-[1.75rem] hover:text-[1.5rem] duration-300 transition-all ease-in-out relative'>DevDanny
+                        <div
+                            ref={devdannyRef}
+                            className="absolute left-0 md:-bottom-[1.2rem] -bottom-[0.6rem] md:w-[5rem] w-[4rem] md:h-[2rem] h-[1rem]"
+                        >
+                            <ScribbleAnimated
+                                color="#FA1E1A"
+                                className='w-full h-full'
+                                animate={devdannyInView}
+                                duration={1.5}
+                                delay={0.4}
+                            />
+                        </div>
+                    </Link>. All rights reserved.</div>
+
+
+
             </main>
         </footer>
     )

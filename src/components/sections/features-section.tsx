@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 import LinkUp from "../illustrations/link-up";
-import { Cloud1, Cloud2, Cloud3 } from "../illustrations/cloud";
+import { Cloud } from "../illustrations/cloud";
 import { generalSans } from "@/app/page";
 
 
@@ -88,36 +88,29 @@ export default function Features() {
 
                     {/* endless left to right wrap, starts from current layout position */}
                     <motion.div
-                        className="absolute -top-[10%] -left-[10%] w-[50rem] h-[25rem] pointer-events-none"
+                        className="absolute md:-top-[10%] top-[10%] -left-[0%] md:w-[100rem] md:h-[25rem] w-[50rem] h-[12.5rem] pointer-events-none"
                         animate={{ x: ["-120%", "120vw"] }}
                         transition={{ duration: 40, ease: "linear", repeat: Infinity, repeatType: "loop" }}
                     >
-                        <Cloud1 />
+                        <Cloud />
                     </motion.div>
 
                     <motion.div
-                        className="absolute -bottom-[10%] -left-[70%] w-[50rem] h-[25rem] pointer-events-none"
+                        className="absolute md:-bottom-[10%] top-[5%] md:-left-[105rem] -left-[52.5rem] md:w-[100rem] md:h-[25rem] w-[50rem] h-[12.5rem] pointer-events-none"
                         animate={{ x: ["-120%", "120vw"] }}
                         transition={{ duration: 46, ease: "linear", repeat: Infinity, repeatType: "loop" }}
                     >
-                        <Cloud1 />
+                        <Cloud />
                     </motion.div>
 
-                    <motion.div
-                        className="absolute -top-[25%] -right-[8%] w-[50rem] h-[25rem] pointer-events-none"
-                        animate={{ x: ["-140%", "120vw"] }}
-                        transition={{ duration: 55, ease: "linear", repeat: Infinity, repeatType: "loop" }}
+                     <motion.div
+                        className="absolute md:-bottom-[10%] top-[10%] md:left-[105rem] left-[52.5rem] md:w-[100rem] md:h-[25rem] w-[50rem] h-[12.5rem] pointer-events-none"
+                        animate={{ x: ["-120%", "120vw"] }}
+                        transition={{ duration: 46, ease: "linear", repeat: Infinity, repeatType: "loop" }}
                     >
-                        <Cloud2 />
+                        <Cloud />
                     </motion.div>
 
-                    <motion.div
-                        className="absolute -bottom-[25%] -right-[8%] w-[50rem] h-[25rem] pointer-events-none"
-                        animate={{ x: ["-140%", "120vw"] }}
-                        transition={{ duration: 70, ease: "linear", repeat: Infinity, repeatType: "loop" }}
-                    >
-                        <Cloud3 />
-                    </motion.div>
                     
                 </div>
 
