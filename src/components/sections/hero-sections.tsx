@@ -30,7 +30,7 @@ function Hero() {
                     {/* Headline */}
                     <p 
                         data-cursor-hover
-                        className="text-white font-bold md:tracking-[-0.5rem] tracking-tight leading-[106%] text-4xl md:text-6xl lg:text-[8.3125rem] md:mb-10 mb-[4.31rem] transition-all duration-300 ease-in-out"
+                        className="text-white font-bold md:tracking-[-0.5rem] tracking-tight leading-[106%] text-[2.5rem] md:text-6xl lg:text-[8.3125rem] md:mb-10 mb-[4.31rem] transition-all duration-300 ease-in-out"
                     >
                         Simple solutions
                         <br /> to power your

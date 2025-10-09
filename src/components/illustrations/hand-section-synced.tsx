@@ -41,7 +41,7 @@ export default function HandsSectionSynced() {
   const perf = "transform-gpu will-change-transform";
 
   return (
-    <section ref={ref} className="w-full relative overflow-x-hidden md:mt-0 mt-[5.2rem]">
+    <section ref={ref} className="w-full relative overflow-x-hidden md:mt-0 mt-[4.2rem]">
       {/* Rocket path reads the same shared progress */}
       {/* <RocketPath
         className="absolute top-0 w-[100vw] md:h-[51.6rem] h-[14.82rem]"
