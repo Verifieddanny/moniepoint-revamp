@@ -7,6 +7,7 @@ import LinkUp from "../illustrations/link-up";
 import { Cloud } from "../illustrations/cloud";
 import { generalSans } from "@/app/page";
 import { useRef } from "react";
+import { useIsMobile } from "../../../lib/utils";
 
 
 const cardVariants = {
@@ -21,6 +22,7 @@ const cardVariants = {
 
 
 export default function Features() {
+    const isMobile = useIsMobile();
     const firstRef = useRef<HTMLDivElement | null>(null);
     const { scrollYProgress: firstP } = useScroll({
         target: firstRef,
@@ -45,7 +47,7 @@ export default function Features() {
             >
                 <div className="w-full h-[14.75rem] md:h-[63%] relative overflow-hidden">
                     <Image
-                        src="/images/pos-wey-no-get-issue.webp"
+                        src={isMobile ? "/images/mobile-pos-wey-no-get-issue.webp" : "/images/pos-wey-no-get-issue.webp"}
                         alt="pos-machine-wey-no-get-wahala"
                         quality={90}
                         fill
@@ -55,14 +57,14 @@ export default function Features() {
                     />
                 </div>
 
-                <div className="w-full h-[18.125rem] md:h-[37%] bg-[#0A6FFE] bg-[url(/images/backgroun-spots.webp)] bg-cover bg-center flex md:flex-row flex-col md:justify-between md:py-[2rem] md:px-[2rem] py-[1rem] px-[0.5rem]">
+                <div className="w-full h-[18.125rem] md:h-[37%] bg-[#0A6FFE] bg-[url(/images/backgroun-spots.webp)] bg-cover bg-center flex md:flex-row flex-col md:justify-between md:py-[2rem] md:px-[2rem] py-[1rem] px-[1rem]">
                     <p className="font-bold md:text-7xl text-3xl text-white md:tracking-[-0.1rem] tracking-tight md:w-[65%] w-full">
                         POS machine wey
                         <br /> no get wahala.
                     </p>
 
                     <div className={`md:w-[35%] w-full ${generalSans.className}`}>
-                        <p className="text-white tracking-tight md:text-base text-sm md:mt-0 md:mb-[2.5rem] mt-[1.5rem] mb-[1rem]">
+                        <p className="text-white tracking-tight md:text-base text-xs md:mt-0 md:mb-[2.5rem] mt-[1.75rem] mb-[1.4rem]">
                             Accept card and transfer payments seamlessly,
                             <br /> with a reliable point of sale terminal. Enjoy
                             <br /> instant settlement, easy dispute resolution, and
@@ -130,7 +132,7 @@ export default function Features() {
 
                 </div>
 
-                <div className="w-full h-[18.125rem] md:h-[37%] bg-[#0A6FFE] bg-[url(/images/backgroun-spots.webp)] bg-cover bg-center flex md:flex-row flex-col md:justify-between md:py-[2rem] md:px-[2rem] py-[1rem] px-[0.5rem]">
+                <div className="w-full h-[18.125rem] md:h-[37%] bg-[#0A6FFE] bg-[url(/images/backgroun-spots.webp)] bg-cover bg-center flex md:flex-row flex-col md:justify-between md:py-[2rem] md:px-[2rem] py-[1rem] px-[1rem]">
                     <p className="font-bold md:text-7xl text-3xl text-white md:tracking-[-0.1rem] tracking-tight md:w-[65%] w-full">
                         Better card
                         <br />
@@ -138,7 +140,7 @@ export default function Features() {
                     </p>
 
                     <div className={`md:w-[35%] w-full ${generalSans.className}`}>
-                        <p className="text-white tracking-tight md:text-base text-sm md:mt-0 md:mb-[2.5rem] mt-[1.5rem] mb-[0.8rem]">
+                        <p className="text-white tracking-tight md:text-base text-xs md:mt-0 md:mb-[2.5rem] mt-[1.75rem] mb-[1.4rem]">
                             Order an expense card to spend and manage your
                             <br /> business finance effectively, and get it in 48hrs.
                             <br /> Track your business expenses and set limits for
@@ -179,7 +181,7 @@ export default function Features() {
                     />
                 </div>
 
-                <div className="w-full h-[18.125rem] md:h-[37%] bg-[#0A6FFE] bg-[url(/images/backgroun-spots.webp)] bg-cover bg-center flex md:flex-row flex-col md:justify-between md:py-[2rem] md:px-[2rem] py-[1rem] px-[0.5rem]">
+                <div className="w-full h-[18.125rem] md:h-[37%] bg-[#0A6FFE] bg-[url(/images/backgroun-spots.webp)] bg-cover bg-center flex md:flex-row flex-col md:justify-between md:py-[2rem] md:px-[2rem] py-[1rem] px-[1rem]">
                     <p className="font-bold md:text-7xl text-3xl text-white md:tracking-[-0.1rem] tracking-tight md:w-[65%] w-full">
                         You fit get
                         <br />
@@ -187,7 +189,7 @@ export default function Features() {
                     </p>
 
                     <div className={`md:w-[35%] w-full ${generalSans.className}`}>
-                        <p className="text-white tracking-tight md:text-base text-sm md:mt-0 md:mb-[2.5rem] mt-[1.71rem] mb-[2rem]">
+                        <p className="text-white tracking-tight md:text-base text-xs md:mt-0 md:mb-[2.5rem] mt-[1.75rem] mb-[2.25rem]">
                             Access working capital loans to help your business
                             <br /> grow. Easy request process with business friendly
                             <br /> interest rates and repayment tenures.
