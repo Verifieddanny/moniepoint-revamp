@@ -6,7 +6,7 @@ import {
     useScroll,
     useTransform,
 } from "motion/react";
-import { generalSans } from "@/app/page";
+import type { MotionValue } from "motion";
 
 /* ---------------------------------------
    Data
@@ -61,7 +61,7 @@ const STEPS: Step[] = [
 ----------------------------------------*/
 function CheckIcon() {
     return (
-        <svg width="32" height="32" viewBox="0 0 90 69" fill="none" xmlns="http://www.w3.org/2000/svg" className="md:w-[1.5rem] md:h-[1.5rem] w-[1rem] h-[1rem]">
+        <svg width="32" height="32" viewBox="0 0 90 69" fill="none" xmlns="http://www.w3.org/2000/svg" className="md:w-[1.2rem] md:h-[1.2rem] w-[0.8rem] h-[0.8rem]">
             <path d="M10.875 36.2383L33.625 58.9883L79.125 10.2383" stroke="white" strokeWidth="20" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
 
@@ -112,29 +112,45 @@ function WalletIcon({ className }: { className?: string }) {
 /* ---------------------------------------
    One step row
 ----------------------------------------*/
-function TimelineStep({ step, index }: { step: Step; index: number }) {
+
+function TimelineStep({ step, index, progressY }: { step: Step; index: number; progressY: MotionValue<number> }) {
     const ref = useRef<HTMLDivElement | null>(null);
 
-    // progress for THIS row only, tune the band with the offsets
-    const { scrollYProgress: rowP } = useScroll({
-        target: ref,
-        offset: ["start 96%", "start 60%"],
-    });
+    const checkpointPosition = index / (STEPS.length - 1);
 
+    const ringScale = useTransform(
+        progressY,
+        [
+            Math.max(0, checkpointPosition - 0.1),
+            checkpointPosition,
+            Math.min(1, checkpointPosition + 0.1)
+        ],
+        [0.85, 0.95, 1],
+    );
 
+    const ringBg = useTransform(
+        progressY,
+        [Math.max(0, checkpointPosition - 0.05), Math.min(1, checkpointPosition + 0.05)],
+        ["#ffffff", "#00C74E"],
+    );
 
-    // smooth, reversible styling
-    const ringScale = useTransform(rowP, [0, 0.5, 1], [0.9, 0.95, 1]);
-    const ringBg = useTransform(rowP, [0, 0.5, 1], ["#ffffff", "#ffffff", "#00C74E"]);
-    const ringBorder = useTransform(rowP, [0, 0.5, 1], ["#E5E7EB", "#E5E7EB", "#00C74E"]);
-    const checkOpacity = useTransform(rowP, [0.6, 0.8], [0, 1]);
+    const ringBorder = useTransform(
+        progressY,
+        [Math.max(0, checkpointPosition - 0.05), Math.min(1, checkpointPosition + 0.05)],
+        ["#E5E7EB", "#00C74E"],
+    );
+
+    const checkOpacity = useTransform(
+        progressY,
+        [checkpointPosition, Math.min(1, checkpointPosition + 0.12)],
+        [0, 1],
+    );
 
     return (
-        <div ref={ref} className="relative grid grid-cols-[72px_1fr] gap-2 md:gap-6">
+        <div ref={ref} className="relative grid grid-cols-[100px_1fr] md:grid-cols-[120px_1fr] gap-4 md:gap-10">
             <div className="relative">
-                {/* exact same size/positioning as yours */}
                 <motion.div
-                    className=" absolute left-1/2 -translate-x-1/2 w-8 h-8 md:w-[4.2rem] md:h-[4.2rem] md:mt-[1rem] mt-[3.5rem] rounded-full border-[4px]"
+                    className="absolute left-1/2 -translate-x-1/2 w-7 h-7 md:w-[3.2rem] md:h-[3.2rem] md:mt-[1rem] mt-[3.5rem] rounded-full border-[3px] md:border-[4px]"
                     style={{ scale: ringScale, backgroundColor: ringBg, borderColor: ringBorder }}
                     aria-hidden="true"
                 >
@@ -147,21 +163,20 @@ function TimelineStep({ step, index }: { step: Step; index: number }) {
                 </motion.div>
             </div>
 
-            {/* your card, unchanged */}
             <motion.div
                 className="rounded-xl bg-[#F4F4F4] p-5 md:p-6"
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ amount: 0.5, once: true }}
-                transition={{ duration: 0.45, ease: "easeOut", delay: 0.08 * index }}
+                viewport={{ amount: 0.3, once: true }}
+                transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1], delay: 0.1 * index }}
             >
                 <div className="flex items-start gap-4">
-                    <div className="w-20 h-20 rounded-2xl flex-one items-center justify-center md:flex hidden" style={{ backgroundColor: step.color }} aria-hidden="true">
+                    <div className="w-20 h-20 rounded-2xl md:flex hidden items-center justify-center" style={{ backgroundColor: step.color }} aria-hidden="true">
                         {step.icon}
                     </div>
                     <div>
                         <p className="text-[#454545] font-bold md:text-xl text-base tracking-tight">{step.title}</p>
-                        <p className={`text-[#696969] mt-2 md:text-sm text-xs ${generalSans.className}`}>{step.body}</p>
+                        <p className="text-[#696969] mt-2 md:text-sm text-xs font-sans">{step.body}</p>
                     </div>
                 </div>
             </motion.div>
@@ -176,43 +191,39 @@ function TimelineStep({ step, index }: { step: Step; index: number }) {
 export default function Timeline() {
     const sectionRef = useRef<HTMLElement | null>(null);
 
-    // Scroll progress across the section, 0 at top, 1 at bottom
-    const { scrollYProgress } = useScroll({ target: sectionRef, offset: ["start 70%", "end 60%"], });
+    const { scrollYProgress } = useScroll({
+        target: sectionRef,
+        offset: ["start 75%", "end 65%"],
+    });
 
-
-
-   // We will scale the green line from the top
-   const scaleY = useTransform(scrollYProgress, [0, 1], [0, 1]);
-
+    const scaleY = useTransform(
+        scrollYProgress,
+        [0, 1],
+        [0, 1],
+    );
 
     return (
         <section
             ref={sectionRef}
-            className="relative max-w-[960px] mx-auto px-4 md:px-6 py-10 md:py-16"
+            className="relative max-w-[960px] mx-auto px-4 md:px-6 py-16 md:py-24"
         >
-
             <div className="relative">
-                {/* Static rail on md+ */}
                 <div
-                    className="absolute left-[28px] top-[2rem] bottom-0"
+                    className="absolute left-[2.625rem] md:left-[3.25rem] top-[2rem] bottom-0"
                     aria-hidden="true"
                 >
-                    <div className="absolute left-[28px] top-[2rem] bottom-0" aria-hidden="true">
-                        {/* gray track, unchanged look but full path height = 90% */}
-                        <div className="absolute left-1/2 md:-translate-x-[1.2rem] -translate-x-[1.3rem] w-[4px] h-[90%] bg-[#E5E7EB] rounded-full" />
-                        {/* green progress, same height as track, grows from top */}
+                    <div className="absolute md:top-0 top-[3rem] bottom-0" aria-hidden="true">
+                        <div className="absolute left-1/2 md:translate-x-[0.4rem] translate-x-[0.4rem] w-[4px] md:h-[85%] h-[87%] bg-[#E5E7EB] rounded-full" />
                         <motion.div
-                            className="absolute left-1/2 md:-translate-x-[1.2rem] -translate-x-[1.3rem] w-[4px] h-[90%] bg-[#00C74E] rounded-full origin-top"
+                            className="absolute left-1/2 md:translate-x-[0.4rem] translate-x-[0.4rem] w-[4px] md:h-[85%] h-[87%] bg-[#00C74E] rounded-full origin-top"
                             style={{ scaleY }}
                         />
                     </div>
-
-
                 </div>
 
-                <div className="space-y-6 md:space-y-7">
+                <div className="space-y-10 md:space-y-20">
                     {STEPS.map((s, i) => (
-                        <TimelineStep key={s.id} step={s} index={i} />
+                        <TimelineStep key={s.id} step={s} index={i} progressY={scrollYProgress} />
                     ))}
                 </div>
             </div>

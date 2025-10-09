@@ -1,13 +1,13 @@
 "use client"
 
 import React, { useState } from 'react'
-import Scribble from '../illustrations/scribble'
 import TestimonialQuote from '../illustrations/testimonial-quote'
 import Navigation from '../illustrations/navigation'
 import { generalSans } from '@/app/page'
 import VideoCard from '../ui/video-card'
 import { testimonials } from '../../../lib/testimonial'
 import { motion, AnimatePresence } from "motion/react";
+import ScribbleAnimated from '../illustrations/scribble'
 
 /* tuning knobs */
 const SWIPE_OFFSET_PX = 60;          
@@ -46,7 +46,7 @@ function Testimonial() {
                     transition={{ duration: 0.9, ease: "easeInOut" }}
                     className="absolute md:left-[7rem] left-[3.7rem] md:-bottom-[1.8rem] -bottom-[0.6rem] md:w-[11rem] w-[6rem] md:h-[4rem]"
                 >
-                    <Scribble color={current.scribbleColor} className='w-full h-full' />
+                    <ScribbleAnimated color={current.scribbleColor} className='w-full h-full' />
                 </motion.div>
             </div>
 
@@ -66,7 +66,7 @@ function Testimonial() {
               animate="center"
               exit="exit"
               transition={{ type: "spring", stiffness: 380, damping: 36, mass: 0.9 }}
-              className="w-full h-full rounded-[1rem] md:p-[2rem] p-2 select-none [touch-action:pan-y]"
+              className="w-full h-full rounded-[1.5rem] md:pb-[1rem] md:px-[1.8rem] md:py-[2.15rem] py-[0.75rem] px-[0.69rem] pb-2 select-none [touch-action:pan-y]"
               style={{ backgroundColor: current.cardColor }}
 
               /* swipe settings */

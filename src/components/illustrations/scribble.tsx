@@ -7,12 +7,14 @@ export default function ScribbleAnimated({
     color = "#FFDA46",
     duration = 0.8,
     delay = 0,
-    className
+    className,
+    animate = true
 }: {
     color?: string;
     duration?: number;
     delay?: number;
     className?: string;
+    animate?: boolean;
 }) {
     return (
         <svg
@@ -27,7 +29,7 @@ export default function ScribbleAnimated({
                 strokeWidth="30"
                 strokeLinecap="round"
                 initial={{ pathLength: 0 }}
-                animate={{ pathLength: 1 }}
+                animate={{ pathLength: animate ? 1 : 0 }}
                 transition={{
                     duration,
                     delay,
